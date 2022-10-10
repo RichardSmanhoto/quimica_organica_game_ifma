@@ -44,9 +44,9 @@ function adicionar() {
 
 function selecionar_modelo(modelo) {
   if (modelo === "verdadeiroOuFalso") {
-    form.setAttribute("action", "./twooptions.html");
+    form.setAttribute("action", "./game/twooptions.html");
   } else {
-    form.setAttribute("action", "./alternative.html");
+    form.setAttribute("action", "./game/alternative.html");
   }
 }
 
