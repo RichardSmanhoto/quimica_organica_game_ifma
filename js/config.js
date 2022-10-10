@@ -3,9 +3,15 @@ const assuntos_select = document.getElementById("assuntos-select");
 const quant_questoes = document.getElementById("quant_questoes");
 const modelo_select = document.getElementById("modelo-select");
 
-var info_config;
+var info;
 
-function atualizar_config(
+form.addEventListener("submit", () => {
+  adicionar();
+  adicionar_localStorage(info);
+  selecionar_modelo(info.modelo);
+});
+
+function Informacoes_config(
   nome,
   temNome,
   assuntos,
@@ -13,31 +19,39 @@ function atualizar_config(
   quantidadeQuestao,
   modelo
 ) {
-  info_config = {
+  info = {
     nome: nome,
     temNome: temNome,
     assuntos: assuntos,
     modo: modo,
-    quantidadeDeQuestoes: quantidadeQuestao,
-    modeloDeJogo: modelo,
+    quantidadeQuestao: quantidadeQuestao,
+    modelo: modelo,
   };
 
-  return info_config;
+  return info;
 }
 
-form.onsubmit = (e) => {
-  console.log(
-    atualizar_config(
-      null,
-      false,
-      assuntos_select.value,
-      null,
-      quant_questoes.value,
-      modelo_select.value == 1 ? "verdadeiroOuFalso" : "alternativa"
-    )
+function adicionar() {
+  Informacoes_config(
+    null,
+    false,
+    assuntos_select.value.sort(),
+    null,
+    quant_questoes.value,
+    modelo_select.value == 1 ? "verdadeiroOuFalso" : "DuasOpcoes"
   );
+}
 
-  if (info_config.modeloDeJogo === "verdadeiroOuFalso") {
+function selecionar_modelo(modelo) {
+  if (modelo === "verdadeiroOuFalso") {
     form.setAttribute("action", "./twooptions.html");
+  } else {
+    form.setAttribute("action", "./alternative.html");
   }
-};
+}
+
+function adicionar_localStorage(object) {
+  for (const key in object) {
+    localStorage.setItem(key, JSON.stringify(object[key]));
+  }
+}
