@@ -38,7 +38,7 @@ function adicionar() {
     assuntos_select.value.sort(),
     null,
     quant_questoes.value,
-    modelo_select.value == 1 ? "verdadeiroOuFalso" : "DuasOpcoes"
+    modelo_select.value === "1" ? "verdadeiroOuFalso" : "Alternative"
   );
 }
 
