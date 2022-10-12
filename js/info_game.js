@@ -1,18 +1,21 @@
 import questoes from "../questions/quests.js";
 
 const assuntos = JSON.parse(localStorage.getItem("assuntos"));
-console.log(`chamando valor da chave assuntos: ${assuntos}`);
+const quantidadeQuestao = JSON.parse(localStorage.getItem("quantidadeQuestao"));
 
-function pegar_assunto(arrayQuestion, arrayAssuntos) {
-  for (let i = 0; i < arrayQuestion.length; i++) {
-    let QuestionAssunto = arrayQuestion[i].assunto;
-    console.log(
-      `Assunto da array de questoes: ${QuestionAssunto} \nassunto do localstorage: ${arrayAssuntos[i]}`
-    );
-    if (QuestionAssunto === arrayAssuntos[i]) {
-      console.log(QuestionAssunto);
-    }
-  }
+function EntregaDeQuestoes(arrayQuestion, arrayAssuntos, tamanho) {
+  let questoesDoJogo = new Array();
+  arrayQuestion.map((elementArrayQuestion) => {
+    arrayAssuntos.map((elementArrayAssuntos) => {
+      if (elementArrayQuestion.assunto === elementArrayAssuntos) {
+        if (questoesDoJogo.length >= tamanho) {
+          return;
+        }
+        questoesDoJogo.push(elementArrayQuestion);
+      }
+    });
+  });
+  return questoesDoJogo;
 }
 
-pegar_assunto(questoes, assuntos);
+console.log(EntregaDeQuestoes(questoes, assuntos, quantidadeQuestao));
