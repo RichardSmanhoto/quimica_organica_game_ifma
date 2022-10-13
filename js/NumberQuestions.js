@@ -1,31 +1,36 @@
 const assuntos_select = document.getElementById("assuntos-select");
-const quant_questoes = document.getElementById("quant_questoes");
+const select_quantQuestoes = document.getElementById("quant_questoes");
 
 var quant_questao = [];
 
 assuntos_select.onchange = () => {
   quant_questao = assuntos_select.value;
-  retornar_NQuestoes(quant_questao);
+  retornar_NQuestoes(quant_questao, select_quantQuestoes);
 };
 
-function retornar_NQuestoes(array) {
+function retornar_NQuestoes(array, element) {
   const quant_assuntos_selecionados = array.length;
   if (quant_assuntos_selecionados !== 0) {
-    quant_questoes.removeAttribute("disabled");
-    quant_questoes.innerHTML = "";
+    element.removeAttribute("disabled");
+    element.innerHTML = "";
+    let numDeQuestoes = 0;
     const min = 20;
-    var n_questoes = quant_assuntos_selecionados * min;
-    while (n_questoes >= 5) {
-      quant_questoes.innerHTML += `<option value="${n_questoes}">${n_questoes}</option>`;
-
-      if (n_questoes === 10) {
-        n_questoes -= 5;
+    var max_numDeQuestoes =
+      quant_assuntos_selecionados * min > 100
+        ? 100
+        : quant_assuntos_selecionados * min;
+    while (numDeQuestoes < max_numDeQuestoes) {
+      if (numDeQuestoes === 0) {
+        numDeQuestoes += 5;
+        element.innerHTML += `<option value="${numDeQuestoes}">${numDeQuestoes}</option>`;
+        numDeQuestoes += 5;
       } else {
-        n_questoes -= 10;
+        numDeQuestoes += 10;
       }
+      element.innerHTML += `<option value="${numDeQuestoes}">${numDeQuestoes}</option>`;
     }
   } else {
-    quant_questoes.innerHTML = "";
-    quant_questoes.setAttribute("disabled", "disabled");
+    element.innerHTML = "";
+    element.setAttribute("disabled", "disabled");
   }
 }

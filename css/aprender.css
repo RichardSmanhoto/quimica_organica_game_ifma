@@ -24,6 +24,10 @@ header {
   float: right;
 }
 
+#btt-fechar {
+  font-size: 25px;
+}
+
 nav {
   height: 100%;
   width: 0px;
@@ -40,7 +44,7 @@ nav a {
   list-style-type: none;
   padding: 12px 10px 12px 32px;
   color: white;
-  font-size: 25px;
+  font-size: 12px;
   display: block;
 }
 
