@@ -12,7 +12,7 @@
     <main class="config">
       <form id="form">
         <div class="form-control">
-          <label for="assuntos-select">Assunto(s):</label>
+          <label for="assuntos-select">Assunto(s)</label>
           <select
             id="assuntos-select"
             name="assuntos-select"
@@ -21,16 +21,17 @@
             data-silent-initial-value-set="true"
             multiple
           >
-            <option value="ass1">ass1</option>
-            <option value="ass2">ass2</option>
-            <option value="ass3">ass3</option>
-            <option value="ass4">ass4</option>
-            <option value="ass5">ass5</option>
-            <option value="ass6">ass6</option>
-            <option value="ass7">ass7</option>
-            <option value="ass8">ass8</option>
-            <option value="ass9">ass9</option>
-            <option value="ass10">ass10</option>
+            <option value="ass1">Introdução à química orgânica</option>
+            <option value="ass2">O que a química orgânica estuda</option>
+            <option value="ass3">O que são compostos orgânicos</option>
+            <option value="ass4">
+              Características do átomo de carbono: Postulados de Kekulé
+            </option>
+            <option value="ass5">Representação das cadeias carbônicas</option>
+            <option value="ass6">Classificação dos carbonos</option>
+            <option value="ass7">Classificação das cadeias carbônicas</option>
+            <option value="ass8">Introdução às funções orgânicas</option>
+            <option value="ass9">Isomeria</option>
           </select>
         </div>
 
@@ -57,7 +58,12 @@
     </main>
     <script type="text/javascript" src="js/virtual-select.min.js"></script>
     <script type="text/javascript">
-      VirtualSelect.init({ ele: "#assuntos-select" });
+      VirtualSelect.init({
+        optionsSelectedText: "opções selecionadas",
+        optionSelectedText: "opção selecionada",
+        allOptionsSelectedText: "Todas selecionadas",
+        ele: "#assuntos-select",
+      });
       VirtualSelect.init({ ele: "#modelo-select" });
     </script>
     <script type="module" src="js/NumberQuestions.js"></script>

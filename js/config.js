@@ -2,26 +2,43 @@ const form = document.getElementById("form");
 const assuntos_select = document.getElementById("assuntos-select");
 const quant_questoes = document.getElementById("quant_questoes");
 const modelo_select = document.getElementById("modelo-select");
+const modo_select = document.getElementById("modo-select");
+const nome_input = document.getElementById("name");
+
+const estadoAtual = localStorage.getItem("estado");
 
 var info;
 
 form.addEventListener("submit", () => {
-  adicionar();
+  if (estadoAtual === "treinar") {
+    Informacoes_config(
+      null,
+      assuntos_select.value.sort(),
+      null,
+      quant_questoes.value,
+      modelo_select.value === "1" ? "verdadeiroOuFalso" : "Alternative"
+    );
+  } else if (estadoAtual === "jogar") {
+    Informacoes_config(
+      nome_input.value,
+      assuntos_select.value.sort(),
+      modo_select.value === "1"
+        ? "infinidade"
+        : modo_select.value === "2"
+        ? "umMinuto"
+        : "tresVidas",
+      quant_questoes.value,
+      modelo_select.value === "1" ? "verdadeiroOuFalso" : "Alternative"
+    );
+  } else {
+  }
   adicionar_localStorage(info);
   selecionar_modelo(info.modelo);
 });
 
-function Informacoes_config(
-  nome,
-  temNome,
-  assuntos,
-  modo,
-  quantidadeQuestao,
-  modelo
-) {
+function Informacoes_config(nome, assuntos, modo, quantidadeQuestao, modelo) {
   info = {
     nome: nome,
-    temNome: temNome,
     assuntos: assuntos,
     modo: modo,
     quantidadeQuestao: quantidadeQuestao,
@@ -31,16 +48,7 @@ function Informacoes_config(
   return info;
 }
 
-function adicionar() {
-  Informacoes_config(
-    null,
-    false,
-    assuntos_select.value.sort(),
-    null,
-    quant_questoes.value,
-    modelo_select.value === "1" ? "verdadeiroOuFalso" : "Alternative"
-  );
-}
+function adicionar() {}
 
 function selecionar_modelo(modelo) {
   if (modelo === "verdadeiroOuFalso") {

@@ -4,12 +4,93 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/jogo.css" />
-    <title>Competir</title>
+    <link rel="stylesheet" href="css/virtual-select.min.css" />
+    <link rel="stylesheet" href="css/config.css" />
+    <title>Jogar química orgânica</title>
   </head>
-  <body class="container">
+  <body>
     <main class="config">
-      <form action="" method="post"></form>
+      <form id="form">
+        <div class="form-control">
+          <label for="name">Nome</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Digite seu nome"
+          />
+        </div>
+        <div class="form-control">
+          <label for="assuntos-select">Assunto(s)</label>
+          <select
+            id="assuntos-select"
+            name="assuntos-select"
+            placeholder="Escolha aqui"
+            data-search="true"
+            data-silent-initial-value-set="true"
+            multiple
+          >
+            <option value="ass1">Introdução à química orgânica</option>
+            <option value="ass2">O que a química orgânica estuda</option>
+            <option value="ass3">O que são compostos orgânicos</option>
+            <option value="ass4">
+              Características do átomo de carbono: Postulados de Kekulé
+            </option>
+            <option value="ass5">Representação das cadeias carbônicas</option>
+            <option value="ass6">Classificação dos carbonos</option>
+            <option value="ass7">Classificação das cadeias carbônicas</option>
+            <option value="ass8">Introdução às funções orgânicas</option>
+            <option value="ass9">Isomeria</option>
+          </select>
+        </div>
+
+        <div class="form-control">
+          <label for="quant_questoes">Nº de questões</label>
+          <select name="quant_questoes" id="quant_questoes" disabled></select>
+        </div>
+
+        <div class="form-control">
+          <label for="modo-select">Modo de jogo</label>
+          <select
+            name="modo-select"
+            id="modo-select"
+            placeholder="Escolha aqui"
+            data-silent-initial-value-set="true"
+          >
+            <option value="1">Infinidade</option>
+            <option value="2">1 minuto</option>
+            <option value="3">3 vidas</option>
+          </select>
+        </div>
+
+        <div class="form-control">
+          <label for="modelo-select">Modelo de jogo</label>
+          <select
+            name="modelo-select"
+            id="modelo-select"
+            placeholder="Escolha aqui"
+            data-silent-initial-value-set="true"
+          >
+            <option value="1">Verdadeiro ou falso</option>
+            <option value="2">Cinco alternativas</option>
+          </select>
+        </div>
+
+        <button type="submit" id="btt-submit">Iniciar</button>
+      </form>
     </main>
+    <script type="text/javascript" src="js/virtual-select.min.js"></script>
+    <script type="text/javascript">
+      VirtualSelect.init({
+        optionsSelectedText: "opções selecionadas",
+        optionSelectedText: "opção selecionada",
+        allOptionsSelectedText: "Todas selecionadas",
+        ele: "#assuntos-select",
+      });
+      VirtualSelect.init({ ele: "#modelo-select" });
+      VirtualSelect.init({ ele: "#modo-select" });
+    </script>
+    <script type="module" src="js/NumberQuestions.js"></script>
+    <script type="module" src="js/config.js"></script>
   </body>
 </html>
