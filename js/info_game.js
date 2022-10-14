@@ -2,7 +2,13 @@ import questoes from "../questions/quests.js";
 
 const assuntos = JSON.parse(localStorage.getItem("assuntos"));
 const quantidadeQuestao = JSON.parse(localStorage.getItem("quantidadeQuestao"));
+
 const allQuestions = EntregaDeQuestoes(questoes, assuntos, quantidadeQuestao);
+const questoesParaJogar = Embaralhamento(
+  quantidadeQuestao,
+  assuntos.length,
+  allQuestions
+);
 
 function EntregaDeQuestoes(arrayQuestion, arrayAssuntos) {
   let questoesDoJogo = new Array();
@@ -18,24 +24,32 @@ function EntregaDeQuestoes(arrayQuestion, arrayAssuntos) {
 
 function Embaralhamento(n_select, tamanhoDaLista, array) {
   n_select = parseInt(n_select);
-  const minQ = 20;
-  const maxQ = minQ * tamanhoDaLista;
-  const proportion = Math.floor((n_select / maxQ) * minQ);
-  console.log(
-    `Voce selecionou: ${n_select} questoes.\n${proportion} questões de cada assunto para ${tamanhoDaLista} assuntos.\nTotal de questoes: ${
-      proportion * tamanhoDaLista
-    }. Para completar a lista, falta ${
-      n_select - proportion * tamanhoDaLista
-    } questao(oes)`
-  );
-  let min = 0;
-  for (let position = 20; position <= maxQ; position += 20) {
-    var questaoRandom = getQuestionRandom(min, position);
-  }
-}
 
-Embaralhamento(quantidadeQuestao, assuntos.length, allQuestions);
+  let questoes_embaralhadas = [];
+
+  const questoesMinimas = 20;
+  const totalDeQuestoes = array.length;
+  const proportion = Math.floor((n_select / totalDeQuestoes) * questoesMinimas);
+  const sobra = n_select - proportion * tamanhoDaLista;
+
+  let min = 0;
+  for (let position = 20; position <= totalDeQuestoes; position += 20) {
+    for (let p = proportion; p > 0; p--) {
+      var questaoRandom = getQuestionRandom(min, position);
+      questoes_embaralhadas.push(array[questaoRandom]);
+    }
+    min = position;
+  }
+  for (let s = sobra; s !== 0; s--) {
+    questaoRandom = getQuestionRandom(0, array.length);
+    questoes_embaralhadas.push(array[questaoRandom]);
+  }
+
+  return questoes_embaralhadas;
+}
 
 function getQuestionRandom(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+
+function ApresentarQuestoes(arrayDeQuestoes) {}

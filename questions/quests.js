@@ -1,16 +1,15 @@
 const questoes = [
   {
     id: 1,
-    pergunta: "",
+    pergunta: "<p></p>",
     alternativas: {
-      a: "",
-      b: "",
-      c: "",
-      d: "",
-      e: "",
+      a: "<p>a</p>",
+      b: "<p></p>",
+      c: "<p></p>",
+      d: "<p></p>",
+      e: "<p></p>",
     },
-    correta: "",
-    dificuldade: "",
+    correta: "<p>a</p>",
     assunto: "ass1",
   },
 
