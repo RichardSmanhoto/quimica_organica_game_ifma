@@ -24,7 +24,7 @@ function EntregaDeQuestoes(arrayQuestion, arrayAssuntos) {
     });
   });
   return questoesDoJogo;
-}
+} //Entrega todos as questoes relacionados aos assuntos escolhidos
 
 function Embaralhamento(n_select, tamanhoDaLista, array) {
   n_select = parseInt(n_select);
@@ -50,17 +50,19 @@ function Embaralhamento(n_select, tamanhoDaLista, array) {
   }
 
   return questoes_embaralhadas;
-}
-
+} //embaralha as questoes proporcionalmente e seleciona a quantidade escolhida pelo usuario
 function getQuestionRandom(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
+  return Math.floor(Math.random() * (max - min)) + min;
 }
 
 function ApresentarQuestoes(arrayDeQuestoes, modo, modelo) {
+  var contagemDeAcertos = 0;
   const divPergunta = document.getElementById("pergunta");
   const divAlternativas = document.getElementById("options");
   if (modelo === "verdadeiroOuFalso") {
-    console.log(divPergunta, divAlternativas);
+    for (var element in arrayDeQuestoes) {
+      console.log(arrayDeQuestoes[element]);
+    }
   } else if (modelo === "Alternative") {
     console.log(divPergunta, divAlternativas);
   } else {
