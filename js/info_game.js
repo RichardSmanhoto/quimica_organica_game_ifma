@@ -11,7 +11,6 @@ const questoesParaJogar = Embaralhamento(
   assuntos.length,
   allQuestions
 );
-
 ApresentarQuestoes(questoesParaJogar, modo, modelo);
 
 function EntregaDeQuestoes(arrayQuestion, arrayAssuntos) {
@@ -56,12 +55,19 @@ function getQuestionRandom(min, max) {
 }
 
 function ApresentarQuestoes(arrayDeQuestoes, modo, modelo) {
+  console.log(arrayDeQuestoes[0].alternativas);
   var contagemDeAcertos = 0;
   const divPergunta = document.getElementById("pergunta");
   const divAlternativas = document.getElementById("options");
   if (modelo === "verdadeiroOuFalso") {
     for (var element in arrayDeQuestoes) {
-      console.log(arrayDeQuestoes[element]);
+      while (true) {
+        divPergunta.innerHTML = arrayDeQuestoes[element];
+        for (var i in arrayDeQuestoes[element]) {
+          divAlternativas.innerHTML += `<button>${arrayDeQuestoes[element].alternativas.a}</button>`;
+        }
+        break;
+      }
     }
   } else if (modelo === "Alternative") {
     console.log(divPergunta, divAlternativas);
@@ -69,3 +75,23 @@ function ApresentarQuestoes(arrayDeQuestoes, modo, modelo) {
     return;
   }
 }
+
+function calcular(a, b, callback) {
+  setTimeout(() => {
+    callback(a + b);
+  }, 3000 /* 3 segundos */);
+}
+
+// Podemos declarar a função de callback
+// inline...
+calcular(1, 2, (resultado) => {
+  console.log("O resultado é", resultado);
+});
+
+// ... ou podemos criar uma função e depois
+// passar seu nome como parâmetro
+function processarResultado(resultado) {
+  console.log("O resultado é", resultado);
+}
+
+calcular(1, 2, processarResultado);
