@@ -1,4 +1,4 @@
-import { lista_assuntos, id_assuntos } from "./assuntos.js";
+import { lista_assuntos, id_assuntos } from "../assuntos/assuntos.js";
 
 const btt_abrir = document.getElementById("btt-abrir");
 const btt_fechar = document.getElementById("btt-fechar");

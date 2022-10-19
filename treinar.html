@@ -20,24 +20,46 @@
             data-search="true"
             data-silent-initial-value-set="true"
             multiple
+            required
           >
-            <option value="ass1">Introdução à química orgânica</option>
-            <option value="ass2">O que a química orgânica estuda</option>
-            <option value="ass3">O que são compostos orgânicos</option>
-            <option value="ass4">
+            <option value="Introdução à química orgânica">
+              Introdução à química orgânica
+            </option>
+            <option value="O que a química orgânica estuda?">
+              O que a química orgânica estuda
+            </option>
+            <option value="O que são compostos orgânicos?">
+              O que são compostos orgânicos
+            </option>
+            <option
+              value="Características do átomo de carbono: Postulados de Kekulé"
+            >
               Características do átomo de carbono: Postulados de Kekulé
             </option>
-            <option value="ass5">Representação das cadeias carbônicas</option>
-            <option value="ass6">Classificação dos carbonos</option>
-            <option value="ass7">Classificação das cadeias carbônicas</option>
-            <option value="ass8">Introdução às funções orgânicas</option>
-            <option value="ass9">Isomeria</option>
+            <option value="Representação das cadeias carbônicas">
+              Representação das cadeias carbônicas
+            </option>
+            <option value="Classificação dos carbonos">
+              Classificação dos carbonos
+            </option>
+            <option value="Classificação das cadeias carbônicas">
+              Classificação das cadeias carbônicas
+            </option>
+            <option value="Introdução às funções orgânicas">
+              Introdução às funções orgânicas
+            </option>
+            <option value="Isomeria">Isomeria</option>
           </select>
         </div>
 
         <div class="form-control">
           <label for="quant_questoes">Nº de questões:</label>
-          <select name="quant_questoes" id="quant_questoes" disabled></select>
+          <select
+            name="quant_questoes"
+            id="quant_questoes"
+            disabled
+            required
+          ></select>
         </div>
 
         <div class="form-control">
@@ -47,6 +69,7 @@
             id="modelo-select"
             placeholder="Escolha aqui"
             data-silent-initial-value-set="true"
+            required
           >
             <option value="1">Verdadeiro ou falso</option>
             <option value="2">Cinco alternativas</option>

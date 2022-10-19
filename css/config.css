@@ -25,3 +25,7 @@ form button {
   height: 50px;
   width: 100px;
 }
+
+#assuntos-select {
+  width: 100cm;
+}
