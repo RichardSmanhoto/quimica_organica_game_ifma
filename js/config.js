@@ -14,7 +14,7 @@ form.addEventListener("submit", () => {
     Informacoes_config(
       null,
       assuntos_select.value.sort(),
-      null,
+      "infinidade",
       quant_questoes.value,
       modelo_select.value === "1" ? "verdadeiroOuFalso" : "Alternative"
     );
@@ -47,8 +47,6 @@ function Informacoes_config(nome, assuntos, modo, quantidadeQuestao, modelo) {
 
   return info;
 }
-
-function adicionar() {}
 
 function selecionar_modelo(modelo) {
   if (modelo === "verdadeiroOuFalso") {

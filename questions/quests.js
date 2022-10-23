@@ -10,7 +10,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Introdução à química orgânica",
   },
   {
@@ -24,7 +24,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Introdução à química orgânica",
   },
   {
@@ -38,7 +38,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Introdução à química orgânica",
   },
   {
@@ -52,7 +52,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Introdução à química orgânica",
   },
   {
@@ -66,7 +66,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Introdução à química orgânica",
   },
   {
@@ -80,7 +80,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Introdução à química orgânica",
   },
   {
@@ -94,7 +94,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Introdução à química orgânica",
   },
   {
@@ -108,7 +108,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Introdução à química orgânica",
   },
   {
@@ -122,7 +122,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Introdução à química orgânica",
   },
   {
@@ -136,7 +136,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Introdução à química orgânica",
   },
   {
@@ -150,7 +150,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Introdução à química orgânica",
   },
   {
@@ -164,7 +164,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Introdução à química orgânica",
   },
   {
@@ -178,7 +178,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Introdução à química orgânica",
   },
   {
@@ -192,7 +192,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Introdução à química orgânica",
   },
   {
@@ -206,7 +206,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Introdução à química orgânica",
   },
   {
@@ -220,7 +220,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Introdução à química orgânica",
   },
   {
@@ -234,7 +234,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Introdução à química orgânica",
   },
   {
@@ -248,7 +248,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Introdução à química orgânica",
   },
   {
@@ -262,7 +262,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Introdução à química orgânica",
   },
   {
@@ -276,7 +276,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Introdução à química orgânica",
   },
   {
@@ -290,7 +290,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "O que a química orgânica estuda?",
   },
   {
@@ -304,7 +304,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "O que a química orgânica estuda?",
   },
   {
@@ -318,7 +318,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "O que a química orgânica estuda?",
   },
   {
@@ -332,7 +332,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "O que a química orgânica estuda?",
   },
   {
@@ -346,7 +346,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "O que a química orgânica estuda?",
   },
   {
@@ -360,7 +360,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "O que a química orgânica estuda?",
   },
   {
@@ -374,7 +374,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "O que a química orgânica estuda?",
   },
   {
@@ -388,7 +388,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "O que a química orgânica estuda?",
   },
   {
@@ -402,7 +402,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "O que a química orgânica estuda?",
   },
   {
@@ -416,7 +416,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "O que a química orgânica estuda?",
   },
   {
@@ -430,7 +430,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "O que a química orgânica estuda?",
   },
   {
@@ -444,7 +444,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "O que a química orgânica estuda?",
   },
   {
@@ -458,7 +458,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "O que a química orgânica estuda?",
   },
   {
@@ -472,7 +472,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "O que a química orgânica estuda?",
   },
   {
@@ -486,7 +486,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "O que a química orgânica estuda?",
   },
   {
@@ -500,7 +500,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "O que a química orgânica estuda?",
   },
   {
@@ -514,7 +514,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "O que a química orgânica estuda?",
   },
   {
@@ -528,7 +528,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "O que a química orgânica estuda?",
   },
   {
@@ -542,7 +542,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "O que a química orgânica estuda?",
   },
   {
@@ -556,7 +556,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "O que a química orgânica estuda?",
   },
   {
@@ -570,7 +570,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "O que são compostos orgânicos?",
   },
   {
@@ -584,7 +584,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "O que são compostos orgânicos?",
   },
   {
@@ -598,7 +598,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "O que são compostos orgânicos?",
   },
   {
@@ -612,7 +612,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "O que são compostos orgânicos?",
   },
   {
@@ -626,7 +626,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "O que são compostos orgânicos?",
   },
   {
@@ -640,7 +640,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "O que são compostos orgânicos?",
   },
   {
@@ -654,7 +654,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "O que são compostos orgânicos?",
   },
   {
@@ -668,7 +668,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "O que são compostos orgânicos?",
   },
   {
@@ -682,7 +682,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "O que são compostos orgânicos?",
   },
   {
@@ -696,7 +696,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "O que são compostos orgânicos?",
   },
   {
@@ -710,7 +710,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "O que são compostos orgânicos?",
   },
   {
@@ -724,7 +724,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "O que são compostos orgânicos?",
   },
   {
@@ -738,7 +738,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "O que são compostos orgânicos?",
   },
   {
@@ -752,7 +752,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "O que são compostos orgânicos?",
   },
   {
@@ -766,7 +766,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "O que são compostos orgânicos?",
   },
   {
@@ -780,7 +780,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "O que são compostos orgânicos?",
   },
   {
@@ -794,7 +794,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "O que são compostos orgânicos?",
   },
   {
@@ -808,7 +808,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "O que são compostos orgânicos?",
   },
   {
@@ -822,7 +822,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "O que são compostos orgânicos?",
   },
   {
@@ -836,7 +836,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "O que são compostos orgânicos?",
   },
   {
@@ -850,7 +850,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Características do átomo de carbono: Postulados de Kekulé",
   },
   {
@@ -864,7 +864,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Características do átomo de carbono: Postulados de Kekulé",
   },
   {
@@ -878,7 +878,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Características do átomo de carbono: Postulados de Kekulé",
   },
   {
@@ -892,7 +892,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Características do átomo de carbono: Postulados de Kekulé",
   },
   {
@@ -906,7 +906,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Características do átomo de carbono: Postulados de Kekulé",
   },
   {
@@ -920,7 +920,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Características do átomo de carbono: Postulados de Kekulé",
   },
   {
@@ -934,7 +934,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Características do átomo de carbono: Postulados de Kekulé",
   },
   {
@@ -948,7 +948,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Características do átomo de carbono: Postulados de Kekulé",
   },
   {
@@ -962,7 +962,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Características do átomo de carbono: Postulados de Kekulé",
   },
   {
@@ -976,7 +976,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Características do átomo de carbono: Postulados de Kekulé",
   },
   {
@@ -990,7 +990,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Características do átomo de carbono: Postulados de Kekulé",
   },
   {
@@ -1004,7 +1004,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Características do átomo de carbono: Postulados de Kekulé",
   },
   {
@@ -1018,7 +1018,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Características do átomo de carbono: Postulados de Kekulé",
   },
   {
@@ -1032,7 +1032,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Características do átomo de carbono: Postulados de Kekulé",
   },
   {
@@ -1046,7 +1046,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Características do átomo de carbono: Postulados de Kekulé",
   },
   {
@@ -1060,7 +1060,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Características do átomo de carbono: Postulados de Kekulé",
   },
   {
@@ -1074,7 +1074,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Características do átomo de carbono: Postulados de Kekulé",
   },
   {
@@ -1088,7 +1088,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Características do átomo de carbono: Postulados de Kekulé",
   },
   {
@@ -1102,7 +1102,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Características do átomo de carbono: Postulados de Kekulé",
   },
   {
@@ -1116,7 +1116,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Características do átomo de carbono: Postulados de Kekulé",
   },
   {
@@ -1130,7 +1130,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Representação das cadeias carbônicas",
   },
   {
@@ -1144,7 +1144,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Representação das cadeias carbônicas",
   },
   {
@@ -1158,7 +1158,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Representação das cadeias carbônicas",
   },
   {
@@ -1172,7 +1172,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Representação das cadeias carbônicas",
   },
   {
@@ -1186,7 +1186,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Representação das cadeias carbônicas",
   },
   {
@@ -1200,7 +1200,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Representação das cadeias carbônicas",
   },
   {
@@ -1214,7 +1214,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Representação das cadeias carbônicas",
   },
   {
@@ -1228,7 +1228,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Representação das cadeias carbônicas",
   },
   {
@@ -1242,7 +1242,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Representação das cadeias carbônicas",
   },
   {
@@ -1256,7 +1256,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Representação das cadeias carbônicas",
   },
   {
@@ -1270,7 +1270,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Representação das cadeias carbônicas",
   },
   {
@@ -1284,7 +1284,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Representação das cadeias carbônicas",
   },
   {
@@ -1298,7 +1298,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Representação das cadeias carbônicas",
   },
   {
@@ -1312,7 +1312,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Representação das cadeias carbônicas",
   },
   {
@@ -1326,7 +1326,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Representação das cadeias carbônicas",
   },
   {
@@ -1340,7 +1340,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Representação das cadeias carbônicas",
   },
   {
@@ -1354,7 +1354,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Representação das cadeias carbônicas",
   },
   {
@@ -1368,7 +1368,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Representação das cadeias carbônicas",
   },
   {
@@ -1382,7 +1382,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Representação das cadeias carbônicas",
   },
   {
@@ -1396,7 +1396,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Representação das cadeias carbônicas",
   },
   {
@@ -1410,7 +1410,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Classificação dos carbonos",
   },
   {
@@ -1424,7 +1424,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Classificação dos carbonos",
   },
   {
@@ -1438,7 +1438,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Classificação dos carbonos",
   },
   {
@@ -1452,7 +1452,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Classificação dos carbonos",
   },
   {
@@ -1466,7 +1466,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Classificação dos carbonos",
   },
   {
@@ -1480,7 +1480,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Classificação dos carbonos",
   },
   {
@@ -1494,7 +1494,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Classificação dos carbonos",
   },
   {
@@ -1508,7 +1508,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Classificação dos carbonos",
   },
   {
@@ -1522,7 +1522,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Classificação dos carbonos",
   },
   {
@@ -1536,7 +1536,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Classificação dos carbonos",
   },
   {
@@ -1550,7 +1550,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Classificação dos carbonos",
   },
   {
@@ -1564,7 +1564,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Classificação dos carbonos",
   },
   {
@@ -1578,7 +1578,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Classificação dos carbonos",
   },
   {
@@ -1592,7 +1592,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Classificação dos carbonos",
   },
   {
@@ -1606,7 +1606,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Classificação dos carbonos",
   },
   {
@@ -1620,7 +1620,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Classificação dos carbonos",
   },
   {
@@ -1634,7 +1634,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Classificação dos carbonos",
   },
   {
@@ -1648,7 +1648,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Classificação dos carbonos",
   },
   {
@@ -1662,7 +1662,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Classificação dos carbonos",
   },
   {
@@ -1676,7 +1676,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Classificação dos carbonos",
   },
   {
@@ -1690,7 +1690,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Classificação das cadeias carbônicas",
   },
   {
@@ -1704,7 +1704,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Classificação das cadeias carbônicas",
   },
   {
@@ -1718,7 +1718,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Classificação das cadeias carbônicas",
   },
   {
@@ -1732,7 +1732,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Classificação das cadeias carbônicas",
   },
   {
@@ -1746,7 +1746,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Classificação das cadeias carbônicas",
   },
   {
@@ -1760,7 +1760,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Classificação das cadeias carbônicas",
   },
   {
@@ -1774,7 +1774,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Classificação das cadeias carbônicas",
   },
   {
@@ -1788,7 +1788,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Classificação das cadeias carbônicas",
   },
   {
@@ -1802,7 +1802,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Classificação das cadeias carbônicas",
   },
   {
@@ -1816,7 +1816,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Classificação das cadeias carbônicas",
   },
   {
@@ -1830,7 +1830,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Classificação das cadeias carbônicas",
   },
   {
@@ -1844,7 +1844,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Classificação das cadeias carbônicas",
   },
   {
@@ -1858,7 +1858,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Classificação das cadeias carbônicas",
   },
   {
@@ -1872,7 +1872,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Classificação das cadeias carbônicas",
   },
   {
@@ -1886,7 +1886,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Classificação das cadeias carbônicas",
   },
   {
@@ -1900,7 +1900,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Classificação das cadeias carbônicas",
   },
   {
@@ -1914,7 +1914,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Classificação das cadeias carbônicas",
   },
   {
@@ -1928,7 +1928,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Classificação das cadeias carbônicas",
   },
   {
@@ -1942,7 +1942,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Classificação das cadeias carbônicas",
   },
   {
@@ -1956,7 +1956,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Classificação das cadeias carbônicas",
   },
   {
@@ -1970,7 +1970,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Introdução às funções orgânicas",
   },
   {
@@ -1984,7 +1984,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Introdução às funções orgânicas",
   },
   {
@@ -1998,7 +1998,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Introdução às funções orgânicas",
   },
   {
@@ -2012,7 +2012,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Introdução às funções orgânicas",
   },
   {
@@ -2026,7 +2026,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Introdução às funções orgânicas",
   },
   {
@@ -2040,7 +2040,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Introdução às funções orgânicas",
   },
   {
@@ -2054,7 +2054,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Introdução às funções orgânicas",
   },
   {
@@ -2068,7 +2068,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Introdução às funções orgânicas",
   },
   {
@@ -2082,7 +2082,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Introdução às funções orgânicas",
   },
   {
@@ -2096,7 +2096,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Introdução às funções orgânicas",
   },
   {
@@ -2110,7 +2110,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Introdução às funções orgânicas",
   },
   {
@@ -2124,7 +2124,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Introdução às funções orgânicas",
   },
   {
@@ -2138,7 +2138,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Introdução às funções orgânicas",
   },
   {
@@ -2152,7 +2152,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Introdução às funções orgânicas",
   },
   {
@@ -2166,7 +2166,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Introdução às funções orgânicas",
   },
   {
@@ -2180,7 +2180,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Introdução às funções orgânicas",
   },
   {
@@ -2194,7 +2194,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Introdução às funções orgânicas",
   },
   {
@@ -2208,7 +2208,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Introdução às funções orgânicas",
   },
   {
@@ -2222,7 +2222,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Introdução às funções orgânicas",
   },
   {
@@ -2236,7 +2236,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Introdução às funções orgânicas",
   },
   {
@@ -2250,7 +2250,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Isomeria",
   },
   {
@@ -2264,7 +2264,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Isomeria",
   },
   {
@@ -2278,7 +2278,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Isomeria",
   },
   {
@@ -2292,7 +2292,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Isomeria",
   },
   {
@@ -2306,7 +2306,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Isomeria",
   },
   {
@@ -2320,7 +2320,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Isomeria",
   },
   {
@@ -2334,7 +2334,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Isomeria",
   },
   {
@@ -2348,7 +2348,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Isomeria",
   },
   {
@@ -2362,7 +2362,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Isomeria",
   },
   {
@@ -2376,7 +2376,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Isomeria",
   },
   {
@@ -2390,7 +2390,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Isomeria",
   },
   {
@@ -2404,7 +2404,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Isomeria",
   },
   {
@@ -2418,7 +2418,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Isomeria",
   },
   {
@@ -2432,7 +2432,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Isomeria",
   },
   {
@@ -2446,7 +2446,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Isomeria",
   },
   {
@@ -2460,7 +2460,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Isomeria",
   },
   {
@@ -2474,7 +2474,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Isomeria",
   },
   {
@@ -2488,7 +2488,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Isomeria",
   },
   {
@@ -2502,7 +2502,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Isomeria",
   },
   {
@@ -2516,7 +2516,7 @@ const questoes = [
       d: "C12H24",
       e: "C18H38",
     },
-    correta: "<p>C8H18</p>",
+    correta: "C8H18",
     assunto: "Isomeria",
   },
 ];
