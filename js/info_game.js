@@ -4,6 +4,7 @@ const assuntos = JSON.parse(localStorage.getItem("assuntos"));
 const quantidadeQuestao = JSON.parse(localStorage.getItem("quantidadeQuestao"));
 const modo = JSON.parse(localStorage.getItem("modo"));
 const modelo = JSON.parse(localStorage.getItem("modelo"));
+const estado = localStorage.getItem("estado");
 
 var ordemQ = 0;
 var contagemDeAcertos = 0;
@@ -65,6 +66,8 @@ function ApresentarQuestoes(arrayDeQuestoes, modo, modelo, ordem, acertos) {
   const opCorreta = document.getElementById("correto");
   const opErrada = document.getElementById("errado");
 
+  const inform = document.getElementById("info");
+
   if (modelo === "verdadeiroOuFalso") {
     var alternativas = Alternativas(arrayDeQuestoes[ordem]);
     var RandomAlt = getNumberRandom(0, alternativas.length);
@@ -75,20 +78,31 @@ function ApresentarQuestoes(arrayDeQuestoes, modo, modelo, ordem, acertos) {
     divPergunta.innerHTML = `${pergunta} Resposta: ${resposta}?<br>${
       ordem + 1
     }`;
+
     if (modo === "infinidade") {
       opCorreta.onclick = () => {
         if (correta === resposta) {
           acertos += 1;
           ordem += 1;
           if (ordem === arrayDeQuestoes.length) {
-            ///botar uma função para levar a outra tela de finalização
+            if (estado === "treinar") {
+              window.location.assign("/game/treinoconcluido.html");
+            }
+            if (estado === "jogar") {
+              window.location.assign("/game/jogoconcluido.html");
+            }
           } else {
             ApresentarQuestoes(questoesParaJogar, modo, modelo, ordem, acertos);
           }
         } else {
           ordem += 1;
           if (ordem === arrayDeQuestoes.length) {
-            ///botar uma função para levar a outra tela de finalização
+            if (estado === "treinar") {
+              window.location.assign("/game/treinoconcluido.html");
+            }
+            if (estado === "jogar") {
+              window.location.assign("/game/jogoconcluido.html");
+            }
           } else {
             ApresentarQuestoes(questoesParaJogar, modo, modelo, ordem, acertos);
           }
@@ -99,31 +113,185 @@ function ApresentarQuestoes(arrayDeQuestoes, modo, modelo, ordem, acertos) {
           acertos += 1;
           ordem += 1;
           if (ordem === arrayDeQuestoes.length) {
-            ///botar uma função para levar a outra tela de finalização
+            if (estado === "treinar") {
+              window.location.assign("/game/treinoconcluido.html");
+            }
+            if (estado === "jogar") {
+              window.location.assign("/game/jogoconcluido.html");
+            }
           } else {
             ApresentarQuestoes(questoesParaJogar, modo, modelo, ordem, acertos);
           }
         } else {
           ordem += 1;
           if (ordem === arrayDeQuestoes.length) {
-            ///botar uma função para levar a outra tela de finalização
+            if (estado === "treinar") {
+              window.location.assign("/game/treinoconcluido.html");
+            }
+            if (estado === "jogar") {
+              window.location.assign("/game/jogoconcluido.html");
+            }
           } else {
             ApresentarQuestoes(questoesParaJogar, modo, modelo, ordem, acertos);
           }
         }
       };
     } else if (modo === "umMinuto") {
-      const span_temporizador = document.getElementById("temporizador");
+      const span_temporizador = inform;
       var temporizador = 1;
       const tempo = setInterval(() => {
         if (temporizador >= 60) {
           clearInterval(tempo);
+          window.location.assign("/game/jogoconcluido.html");
         }
         span_temporizador.innerHTML = temporizador;
         temporizador += 1;
+
+        opCorreta.onclick = () => {
+          clearInterval(tempo);
+          span_temporizador.innerHTML = 0;
+          if (correta === resposta) {
+            acertos += 1;
+            ordem += 1;
+            if (ordem === arrayDeQuestoes.length) {
+              if (estado === "treinar") {
+                window.location.assign("/game/treinoconcluido.html");
+              }
+              if (estado === "jogar") {
+                window.location.assign("/game/jogoconcluido.html");
+              }
+            } else {
+              ApresentarQuestoes(
+                questoesParaJogar,
+                modo,
+                modelo,
+                ordem,
+                acertos
+              );
+            }
+          } else {
+            ordem += 1;
+            if (ordem === arrayDeQuestoes.length) {
+              if (estado === "treinar") {
+                window.location.assign("/game/treinoconcluido.html");
+              }
+              if (estado === "jogar") {
+                window.location.assign("/game/jogoconcluido.html");
+              }
+            } else {
+              ApresentarQuestoes(
+                questoesParaJogar,
+                modo,
+                modelo,
+                ordem,
+                acertos
+              );
+            }
+          }
+        };
+        opErrada.onclick = () => {
+          clearInterval(tempo);
+          span_temporizador.innerHTML = 0;
+          if (correta !== resposta) {
+            acertos += 1;
+            ordem += 1;
+            if (ordem === arrayDeQuestoes.length) {
+              if (estado === "treinar") {
+                window.location.assign("/game/treinoconcluido.html");
+              }
+              if (estado === "jogar") {
+                window.location.assign("/game/jogoconcluido.html");
+              }
+            } else {
+              ApresentarQuestoes(
+                questoesParaJogar,
+                modo,
+                modelo,
+                ordem,
+                acertos
+              );
+            }
+          } else {
+            ordem += 1;
+            if (ordem === arrayDeQuestoes.length) {
+              if (estado === "treinar") {
+                window.location.assign("/game/treinoconcluido.html");
+              }
+              if (estado === "jogar") {
+                window.location.assign("/game/jogoconcluido.html");
+              }
+            } else {
+              ApresentarQuestoes(
+                questoesParaJogar,
+                modo,
+                modelo,
+                ordem,
+                acertos
+              );
+            }
+          }
+        };
       }, 1000);
     } else if (modo === "tresVidas") {
-      console.log("ok3");
+      const span_hearts = inform;
+      // fazer o programa mostrar os tres corações na tela, depois criar um session storage pra guardar uma array com 3 valores pra definir a quantidade de vida. Depois criar uma função pra ler essa array e mostrar os corações na tela.
+
+      opCorreta.onclick = () => {
+        if (correta === resposta) {
+          acertos += 1;
+          ordem += 1;
+          if (ordem === arrayDeQuestoes.length) {
+            if (estado === "treinar") {
+              window.location.assign("/game/treinoconcluido.html");
+            }
+            if (estado === "jogar") {
+              window.location.assign("/game/jogoconcluido.html");
+            }
+          } else {
+            ApresentarQuestoes(questoesParaJogar, modo, modelo, ordem, acertos);
+          }
+        } else {
+          ordem += 1;
+          if (ordem === arrayDeQuestoes.length) {
+            if (estado === "treinar") {
+              window.location.assign("/game/treinoconcluido.html");
+            }
+            if (estado === "jogar") {
+              window.location.assign("/game/jogoconcluido.html");
+            }
+          } else {
+            ApresentarQuestoes(questoesParaJogar, modo, modelo, ordem, acertos);
+          }
+        }
+      };
+      opErrada.onclick = () => {
+        if (correta !== resposta) {
+          acertos += 1;
+          ordem += 1;
+          if (ordem === arrayDeQuestoes.length) {
+            if (estado === "treinar") {
+              window.location.assign("/game/treinoconcluido.html");
+            }
+            if (estado === "jogar") {
+              window.location.assign("/game/jogoconcluido.html");
+            }
+          } else {
+            ApresentarQuestoes(questoesParaJogar, modo, modelo, ordem, acertos);
+          }
+        } else {
+          ordem += 1;
+          if (ordem === arrayDeQuestoes.length) {
+            if (estado === "treinar") {
+              window.location.assign("/game/treinoconcluido.html");
+            }
+            if (estado === "jogar") {
+              window.location.assign("/game/jogoconcluido.html");
+            }
+          } else {
+            ApresentarQuestoes(questoesParaJogar, modo, modelo, ordem, acertos);
+          }
+        }
+      };
     }
   } else if (modelo === "Alternative") {
     console.log(divPergunta, divAlternativas);
