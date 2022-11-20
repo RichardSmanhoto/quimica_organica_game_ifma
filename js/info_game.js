@@ -6,16 +6,13 @@ const modo = JSON.parse(localStorage.getItem("modo"));
 const modelo = JSON.parse(localStorage.getItem("modelo"));
 const estado = localStorage.getItem("estado");
 
-var ordemQ = 0;
-var contagemDeAcertos = 0;
-
 const allQuestions = EntregaDeQuestoes(questoes, assuntos);
 const questoesParaJogar = Embaralhamento(
   quantidadeQuestao,
   assuntos.length,
   allQuestions
 );
-ApresentarQuestoes(questoesParaJogar, modo, modelo, ordemQ, contagemDeAcertos);
+ApresentarQuestoes(questoesParaJogar, modo, modelo, 0, 0);
 
 function EntregaDeQuestoes(arrayQuestion, arrayAssuntos) {
   let questoesDoJogo = new Array();
@@ -77,7 +74,7 @@ function ApresentarQuestoes(arrayDeQuestoes, modo, modelo, ordem, acertos) {
     var correta = arrayDeQuestoes[ordem].correta;
     divPergunta.innerHTML = `${pergunta} Resposta: ${resposta}?<br>${
       ordem + 1
-    }`;
+    }/${arrayDeQuestoes.length}`;
 
     if (modo === "infinidade") {
       opCorreta.onclick = () => {
@@ -148,11 +145,11 @@ function ApresentarQuestoes(arrayDeQuestoes, modo, modelo, ordem, acertos) {
         temporizador += 1;
 
         opCorreta.onclick = () => {
+          ordem += 1;
           clearInterval(tempo);
           span_temporizador.innerHTML = 0;
           if (correta === resposta) {
             acertos += 1;
-            ordem += 1;
             if (ordem === arrayDeQuestoes.length) {
               if (estado === "treinar") {
                 window.location.assign("/game/treinoconcluido.html");
@@ -170,7 +167,6 @@ function ApresentarQuestoes(arrayDeQuestoes, modo, modelo, ordem, acertos) {
               );
             }
           } else {
-            ordem += 1;
             if (ordem === arrayDeQuestoes.length) {
               if (estado === "treinar") {
                 window.location.assign("/game/treinoconcluido.html");
@@ -190,11 +186,11 @@ function ApresentarQuestoes(arrayDeQuestoes, modo, modelo, ordem, acertos) {
           }
         };
         opErrada.onclick = () => {
+          ordem += 1;
           clearInterval(tempo);
           span_temporizador.innerHTML = 0;
           if (correta !== resposta) {
             acertos += 1;
-            ordem += 1;
             if (ordem === arrayDeQuestoes.length) {
               if (estado === "treinar") {
                 window.location.assign("/game/treinoconcluido.html");
@@ -212,7 +208,6 @@ function ApresentarQuestoes(arrayDeQuestoes, modo, modelo, ordem, acertos) {
               );
             }
           } else {
-            ordem += 1;
             if (ordem === arrayDeQuestoes.length) {
               if (estado === "treinar") {
                 window.location.assign("/game/treinoconcluido.html");
@@ -233,60 +228,59 @@ function ApresentarQuestoes(arrayDeQuestoes, modo, modelo, ordem, acertos) {
         };
       }, 1000);
     } else if (modo === "tresVidas") {
+      if (ordem === 0) {
+        sessionStorage.setItem("corações", 3);
+      }
+      var quant_coracao = sessionStorage.getItem("corações");
       const span_hearts = inform;
+      const carregarCoracoes = mostrarCoracoes(
+        span_hearts,
+        quant_coracao,
+        "../frames/heart.png"
+      );
       // fazer o programa mostrar os tres corações na tela, depois criar um session storage pra guardar uma array com 3 valores pra definir a quantidade de vida. Depois criar uma função pra ler essa array e mostrar os corações na tela.
 
       opCorreta.onclick = () => {
+        ordem += 1;
         if (correta === resposta) {
+          //acertou
           acertos += 1;
-          ordem += 1;
           if (ordem === arrayDeQuestoes.length) {
-            if (estado === "treinar") {
-              window.location.assign("/game/treinoconcluido.html");
-            }
-            if (estado === "jogar") {
-              window.location.assign("/game/jogoconcluido.html");
-            }
+            window.location.assign("/game/jogoconcluido.html");
           } else {
             ApresentarQuestoes(questoesParaJogar, modo, modelo, ordem, acertos);
           }
         } else {
-          ordem += 1;
+          // errou
+          sessionStorage.setItem("corações", quant_coracao - 1);
+          if (quant_coracao - 1 === 0) {
+            window.location.assign("/game/jogoconcluido.html");
+          }
           if (ordem === arrayDeQuestoes.length) {
-            if (estado === "treinar") {
-              window.location.assign("/game/treinoconcluido.html");
-            }
-            if (estado === "jogar") {
-              window.location.assign("/game/jogoconcluido.html");
-            }
+            window.location.assign("/game/jogoconcluido.html");
           } else {
             ApresentarQuestoes(questoesParaJogar, modo, modelo, ordem, acertos);
           }
         }
       };
       opErrada.onclick = () => {
+        ordem += 1;
         if (correta !== resposta) {
+          //acertou
           acertos += 1;
-          ordem += 1;
           if (ordem === arrayDeQuestoes.length) {
-            if (estado === "treinar") {
-              window.location.assign("/game/treinoconcluido.html");
-            }
-            if (estado === "jogar") {
-              window.location.assign("/game/jogoconcluido.html");
-            }
+            window.location.assign("/game/jogoconcluido.html");
           } else {
             ApresentarQuestoes(questoesParaJogar, modo, modelo, ordem, acertos);
           }
         } else {
-          ordem += 1;
+          //errou
+          sessionStorage.setItem("corações", quant_coracao - 1);
+          if (quant_coracao - 1 === 0) {
+            window.location.assign("/game/jogoconcluido.html");
+          }
           if (ordem === arrayDeQuestoes.length) {
-            if (estado === "treinar") {
-              window.location.assign("/game/treinoconcluido.html");
-            }
-            if (estado === "jogar") {
-              window.location.assign("/game/jogoconcluido.html");
-            }
+            window.location.assign("/game/jogoconcluido.html");
           } else {
             ApresentarQuestoes(questoesParaJogar, modo, modelo, ordem, acertos);
           }
@@ -309,4 +303,12 @@ function Alternativas(objeto) {
   ArrayAlternativas.push(`${objeto.alternativas.e}`);
 
   return ArrayAlternativas;
+}
+
+function mostrarCoracoes(element, index_max, img) {
+  for (let index = 0; index < index_max; index++) {
+    var print = `<img src=${img} width=30px heigth=30px>`;
+    if (index === 0) element.innerHTML = print;
+    else element.innerHTML += print;
+  }
 }
