@@ -83,10 +83,10 @@ function ApresentarQuestoes(arrayDeQuestoes, modo, modelo, ordem, acertos) {
           ordem += 1;
           if (ordem === arrayDeQuestoes.length) {
             if (estado === "treinar") {
-              window.location.assign("/game/treinoconcluido.html");
+              window.location.assign("./treinoconcluido.html");
             }
             if (estado === "jogar") {
-              window.location.assign("/game/jogoconcluido.html");
+              window.location.assign("./jogoconcluido.html");
             }
           } else {
             ApresentarQuestoes(questoesParaJogar, modo, modelo, ordem, acertos);
@@ -95,10 +95,10 @@ function ApresentarQuestoes(arrayDeQuestoes, modo, modelo, ordem, acertos) {
           ordem += 1;
           if (ordem === arrayDeQuestoes.length) {
             if (estado === "treinar") {
-              window.location.assign("/game/treinoconcluido.html");
+              window.location.assign("./treinoconcluido.html");
             }
             if (estado === "jogar") {
-              window.location.assign("/game/jogoconcluido.html");
+              window.location.assign("./jogoconcluido.html");
             }
           } else {
             ApresentarQuestoes(questoesParaJogar, modo, modelo, ordem, acertos);
@@ -111,10 +111,10 @@ function ApresentarQuestoes(arrayDeQuestoes, modo, modelo, ordem, acertos) {
           ordem += 1;
           if (ordem === arrayDeQuestoes.length) {
             if (estado === "treinar") {
-              window.location.assign("/game/treinoconcluido.html");
+              window.location.assign("./treinoconcluido.html");
             }
             if (estado === "jogar") {
-              window.location.assign("/game/jogoconcluido.html");
+              window.location.assign("./jogoconcluido.html");
             }
           } else {
             ApresentarQuestoes(questoesParaJogar, modo, modelo, ordem, acertos);
@@ -123,10 +123,10 @@ function ApresentarQuestoes(arrayDeQuestoes, modo, modelo, ordem, acertos) {
           ordem += 1;
           if (ordem === arrayDeQuestoes.length) {
             if (estado === "treinar") {
-              window.location.assign("/game/treinoconcluido.html");
+              window.location.assign("../treinoconcluido.html");
             }
             if (estado === "jogar") {
-              window.location.assign("/game/jogoconcluido.html");
+              window.location.assign("./jogoconcluido.html");
             }
           } else {
             ApresentarQuestoes(questoesParaJogar, modo, modelo, ordem, acertos);
@@ -139,7 +139,7 @@ function ApresentarQuestoes(arrayDeQuestoes, modo, modelo, ordem, acertos) {
       const tempo = setInterval(() => {
         if (temporizador >= 60) {
           clearInterval(tempo);
-          window.location.assign("/game/jogoconcluido.html");
+          window.location.assign("./jogoconcluido.html");
         }
         span_temporizador.innerHTML = temporizador;
         temporizador += 1;
@@ -152,10 +152,10 @@ function ApresentarQuestoes(arrayDeQuestoes, modo, modelo, ordem, acertos) {
             acertos += 1;
             if (ordem === arrayDeQuestoes.length) {
               if (estado === "treinar") {
-                window.location.assign("/game/treinoconcluido.html");
+                window.location.assign("./treinoconcluido.html");
               }
               if (estado === "jogar") {
-                window.location.assign("/game/jogoconcluido.html");
+                window.location.assign("./jogoconcluido.html");
               }
             } else {
               ApresentarQuestoes(
@@ -169,10 +169,10 @@ function ApresentarQuestoes(arrayDeQuestoes, modo, modelo, ordem, acertos) {
           } else {
             if (ordem === arrayDeQuestoes.length) {
               if (estado === "treinar") {
-                window.location.assign("/game/treinoconcluido.html");
+                window.location.assign("./treinoconcluido.html");
               }
               if (estado === "jogar") {
-                window.location.assign("/game/jogoconcluido.html");
+                window.location.assign("./jogoconcluido.html");
               }
             } else {
               ApresentarQuestoes(
@@ -193,10 +193,10 @@ function ApresentarQuestoes(arrayDeQuestoes, modo, modelo, ordem, acertos) {
             acertos += 1;
             if (ordem === arrayDeQuestoes.length) {
               if (estado === "treinar") {
-                window.location.assign("/game/treinoconcluido.html");
+                window.location.assign("./treinoconcluido.html");
               }
               if (estado === "jogar") {
-                window.location.assign("/game/jogoconcluido.html");
+                window.location.assign("./jogoconcluido.html");
               }
             } else {
               ApresentarQuestoes(
@@ -210,10 +210,10 @@ function ApresentarQuestoes(arrayDeQuestoes, modo, modelo, ordem, acertos) {
           } else {
             if (ordem === arrayDeQuestoes.length) {
               if (estado === "treinar") {
-                window.location.assign("/game/treinoconcluido.html");
+                window.location.assign("./treinoconcluido.html");
               }
               if (estado === "jogar") {
-                window.location.assign("/game/jogoconcluido.html");
+                window.location.assign("./jogoconcluido.html");
               }
             } else {
               ApresentarQuestoes(
@@ -246,7 +246,7 @@ function ApresentarQuestoes(arrayDeQuestoes, modo, modelo, ordem, acertos) {
           //acertou
           acertos += 1;
           if (ordem === arrayDeQuestoes.length) {
-            window.location.assign("/game/jogoconcluido.html");
+            window.location.assign("./jogoconcluido.html");
           } else {
             ApresentarQuestoes(questoesParaJogar, modo, modelo, ordem, acertos);
           }
@@ -254,10 +254,10 @@ function ApresentarQuestoes(arrayDeQuestoes, modo, modelo, ordem, acertos) {
           // errou
           sessionStorage.setItem("corações", quant_coracao - 1);
           if (quant_coracao - 1 === 0) {
-            window.location.assign("/game/jogoconcluido.html");
+            window.location.assign("./jogoconcluido.html");
           }
           if (ordem === arrayDeQuestoes.length) {
-            window.location.assign("/game/jogoconcluido.html");
+            window.location.assign("./jogoconcluido.html");
           } else {
             ApresentarQuestoes(questoesParaJogar, modo, modelo, ordem, acertos);
           }
@@ -269,7 +269,7 @@ function ApresentarQuestoes(arrayDeQuestoes, modo, modelo, ordem, acertos) {
           //acertou
           acertos += 1;
           if (ordem === arrayDeQuestoes.length) {
-            window.location.assign("/game/jogoconcluido.html");
+            window.location.assign("./jogoconcluido.html");
           } else {
             ApresentarQuestoes(questoesParaJogar, modo, modelo, ordem, acertos);
           }
@@ -277,10 +277,10 @@ function ApresentarQuestoes(arrayDeQuestoes, modo, modelo, ordem, acertos) {
           //errou
           sessionStorage.setItem("corações", quant_coracao - 1);
           if (quant_coracao - 1 === 0) {
-            window.location.assign("/game/jogoconcluido.html");
+            window.location.assign("./jogoconcluido.html");
           }
           if (ordem === arrayDeQuestoes.length) {
-            window.location.assign("/game/jogoconcluido.html");
+            window.location.assign("./jogoconcluido.html");
           } else {
             ApresentarQuestoes(questoesParaJogar, modo, modelo, ordem, acertos);
           }
