@@ -1,5 +1,8 @@
 import questoes from "../questions/quests.js";
 
+sessionStorage.setItem("acertos", 0);
+sessionStorage.setItem("ordem", 1);
+
 const assuntos = JSON.parse(localStorage.getItem("assuntos"));
 const quantidadeQuestao = JSON.parse(localStorage.getItem("quantidadeQuestao"));
 const modo = JSON.parse(localStorage.getItem("modo"));
@@ -65,13 +68,13 @@ function ApresentarQuestoes(arrayDeQuestoes, modo, modelo, ordem, acertos) {
 
   const inform = document.getElementById("info");
 
-  if (modelo === "verdadeiroOuFalso") {
-    var alternativas = Alternativas(arrayDeQuestoes[ordem]);
-    var RandomAlt = getNumberRandom(0, alternativas.length);
+  var pergunta = arrayDeQuestoes[ordem].pergunta;
+  var alternativas = Alternativas(arrayDeQuestoes[ordem]);
+  var correta = arrayDeQuestoes[ordem].correta;
 
+  if (modelo === "verdadeiroOuFalso") {
+    var RandomAlt = getNumberRandom(0, alternativas.length);
     var resposta = alternativas[RandomAlt];
-    var pergunta = arrayDeQuestoes[ordem].pergunta;
-    var correta = arrayDeQuestoes[ordem].correta;
     divPergunta.innerHTML = `${pergunta} Resposta: ${resposta}?<br>${
       ordem + 1
     }/${arrayDeQuestoes.length}`;
@@ -288,9 +291,38 @@ function ApresentarQuestoes(arrayDeQuestoes, modo, modelo, ordem, acertos) {
       };
     }
   } else if (modelo === "Alternative") {
-    console.log(divPergunta, divAlternativas);
-  } else {
-    return;
+    if (modo === "infinidade") {
+      divAlternativas.innerHTML = "";
+      divPergunta.innerHTML = `${pergunta}<br>${parseInt(ordem) + 1}/${
+        arrayDeQuestoes.length
+      }`;
+      alternativas.forEach((element, i) => {
+        divAlternativas.innerHTML += `<button id="valor0${i}" value="${element}">${element}</button>`;
+      });
+
+      var valor00 = document.getElementById("valor00");
+      valor00.onclick = () => {
+        analisarAlt(arrayDeQuestoes, valor00.value, correta);
+      };
+      var valor01 = document.getElementById("valor01");
+      valor01.onclick = () => {
+        analisarAlt(arrayDeQuestoes, valor01.value, correta);
+      };
+      var valor02 = document.getElementById("valor02");
+      valor02.onclick = () => {
+        analisarAlt(arrayDeQuestoes, valor02.value, correta);
+      };
+      var valor03 = document.getElementById("valor03");
+      valor03.onclick = () => {
+        analisarAlt(arrayDeQuestoes, valor03.value, correta);
+      };
+      var valor04 = document.getElementById("valor04");
+      valor04.onclick = () => {
+        analisarAlt(arrayDeQuestoes, valor04.value, correta);
+      };
+    } else {
+      return;
+    }
   }
 }
 
@@ -310,5 +342,28 @@ function mostrarCoracoes(element, index_max, img) {
     var print = `<img src=${img} width=30px heigth=30px>`;
     if (index === 0) element.innerHTML = print;
     else element.innerHTML += print;
+  }
+}
+
+function analisarAlt(arrayDeQuestoes, resposta, correta) {
+  var acertos = sessionStorage.getItem("acertos");
+  var ordem = sessionStorage.getItem("ordem");
+
+  if (resposta === correta) {
+    sessionStorage.setItem("acertos", parseInt(acertos) + 1);
+    sessionStorage.setItem("ordem", parseInt(ordem) + 1);
+
+    if (ordem >= arrayDeQuestoes.length) {
+      window.location.assign("./jogoconcluido.html");
+    } else {
+      ApresentarQuestoes(questoesParaJogar, modo, modelo, ordem, acertos);
+    }
+  } else {
+    sessionStorage.setItem("ordem", parseInt(ordem) + 1);
+    if (ordem >= arrayDeQuestoes.length) {
+      window.location.assign("./jogoconcluido.html");
+    } else {
+      ApresentarQuestoes(questoesParaJogar, modo, modelo, ordem, acertos);
+    }
   }
 }
