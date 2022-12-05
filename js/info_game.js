@@ -241,7 +241,6 @@ function ApresentarQuestoes(arrayDeQuestoes, modo, modelo, ordem, acertos) {
         quant_coracao,
         "../frames/heart.png"
       );
-      // fazer o programa mostrar os tres corações na tela, depois criar um session storage pra guardar uma array com 3 valores pra definir a quantidade de vida. Depois criar uma função pra ler essa array e mostrar os corações na tela.
 
       opCorreta.onclick = () => {
         ordem += 1;
@@ -291,15 +290,15 @@ function ApresentarQuestoes(arrayDeQuestoes, modo, modelo, ordem, acertos) {
       };
     }
   } else if (modelo === "Alternative") {
-    if (modo === "infinidade") {
-      divAlternativas.innerHTML = "";
-      divPergunta.innerHTML = `${pergunta}<br>${parseInt(ordem) + 1}/${
-        arrayDeQuestoes.length
-      }`;
-      alternativas.forEach((element, i) => {
-        divAlternativas.innerHTML += `<button id="valor0${i}" value="${element}">${element}</button>`;
-      });
+    divAlternativas.innerHTML = "";
+    divPergunta.innerHTML = `${pergunta}<br>${parseInt(ordem) + 1}/${
+      arrayDeQuestoes.length
+    }`;
+    alternativas.forEach((element, i) => {
+      divAlternativas.innerHTML += `<button id="valor0${i}" value="${element}">${element}</button>`;
+    });
 
+    if (modo === "infinidade") {
       var valor00 = document.getElementById("valor00");
       valor00.onclick = () => {
         analisarAlt(arrayDeQuestoes, valor00.value, correta);
@@ -330,13 +329,6 @@ function ApresentarQuestoes(arrayDeQuestoes, modo, modelo, ordem, acertos) {
         }
         span_temporizador.innerHTML = temporizador;
         temporizador += 1;
-        divAlternativas.innerHTML = "";
-        divPergunta.innerHTML = `${pergunta}<br>${parseInt(ordem) + 1}/${
-          arrayDeQuestoes.length
-        }`;
-        alternativas.forEach((element, i) => {
-          divAlternativas.innerHTML += `<button id="valor0${i}" value="${element}">${element}</button>`;
-        });
 
         var valor00 = document.getElementById("valor00");
         valor00.onclick = () => {
@@ -364,8 +356,39 @@ function ApresentarQuestoes(arrayDeQuestoes, modo, modelo, ordem, acertos) {
           clearInterval(tempo);
         };
       }, 1000);
-    } else {
-      return;
+    } else if (modo === "tresVidas") {
+      var ordem = sessionStorage.getItem("ordem");
+      if (ordem == 1) {
+        sessionStorage.setItem("corações", 3);
+      }
+      var quant_coracao = sessionStorage.getItem("corações");
+      const span_hearts = inform;
+      const carregarCoracoes = mostrarCoracoes(
+        span_hearts,
+        quant_coracao,
+        "../frames/heart.png"
+      );
+
+      var valor00 = document.getElementById("valor00");
+      valor00.onclick = () => {
+        analisarAlt(arrayDeQuestoes, valor00.value, correta, modo);
+      };
+      var valor01 = document.getElementById("valor01");
+      valor01.onclick = () => {
+        analisarAlt(arrayDeQuestoes, valor01.value, correta, modo);
+      };
+      var valor02 = document.getElementById("valor02");
+      valor02.onclick = () => {
+        analisarAlt(arrayDeQuestoes, valor02.value, correta, modo);
+      };
+      var valor03 = document.getElementById("valor03");
+      valor03.onclick = () => {
+        analisarAlt(arrayDeQuestoes, valor03.value, correta, modo);
+      };
+      var valor04 = document.getElementById("valor04");
+      valor04.onclick = () => {
+        analisarAlt(arrayDeQuestoes, valor04.value, correta, modo);
+      };
     }
   }
 }
@@ -389,7 +412,7 @@ function mostrarCoracoes(element, index_max, img) {
   }
 }
 
-function analisarAlt(arrayDeQuestoes, resposta, correta) {
+function analisarAlt(arrayDeQuestoes, resposta, correta, modo) {
   var acertos = sessionStorage.getItem("acertos");
   var ordem = sessionStorage.getItem("ordem");
 
@@ -403,11 +426,23 @@ function analisarAlt(arrayDeQuestoes, resposta, correta) {
       ApresentarQuestoes(questoesParaJogar, modo, modelo, ordem, acertos);
     }
   } else {
-    sessionStorage.setItem("ordem", parseInt(ordem) + 1);
+    if (modo === "tresVidas") {
+      sessionStorage.setItem(
+        "corações",
+        sessionStorage.getItem("corações") - 1
+      );
+      if (sessionStorage.getItem("corações") - 1 === 0) {
+        window.location.assign("./jogoconcluido.html");
+      }
+    }
     if (ordem >= arrayDeQuestoes.length) {
       window.location.assign("./jogoconcluido.html");
-    } else {
-      ApresentarQuestoes(questoesParaJogar, modo, modelo, ordem, acertos);
     }
+  }
+  sessionStorage.setItem("ordem", parseInt(ordem) + 1);
+  if (ordem >= arrayDeQuestoes.length) {
+    window.location.assign("./jogoconcluido.html");
+  } else {
+    ApresentarQuestoes(questoesParaJogar, modo, modelo, ordem, acertos);
   }
 }
