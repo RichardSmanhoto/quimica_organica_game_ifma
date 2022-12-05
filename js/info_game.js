@@ -320,6 +320,50 @@ function ApresentarQuestoes(arrayDeQuestoes, modo, modelo, ordem, acertos) {
       valor04.onclick = () => {
         analisarAlt(arrayDeQuestoes, valor04.value, correta);
       };
+    } else if (modo === "umMinuto") {
+      const span_temporizador = inform;
+      var temporizador = 1;
+      const tempo = setInterval(() => {
+        if (temporizador >= 60) {
+          clearInterval(tempo);
+          window.location.assign("./jogoconcluido.html");
+        }
+        span_temporizador.innerHTML = temporizador;
+        temporizador += 1;
+        divAlternativas.innerHTML = "";
+        divPergunta.innerHTML = `${pergunta}<br>${parseInt(ordem) + 1}/${
+          arrayDeQuestoes.length
+        }`;
+        alternativas.forEach((element, i) => {
+          divAlternativas.innerHTML += `<button id="valor0${i}" value="${element}">${element}</button>`;
+        });
+
+        var valor00 = document.getElementById("valor00");
+        valor00.onclick = () => {
+          analisarAlt(arrayDeQuestoes, valor00.value, correta);
+          clearInterval(tempo);
+        };
+        var valor01 = document.getElementById("valor01");
+        valor01.onclick = () => {
+          analisarAlt(arrayDeQuestoes, valor01.value, correta);
+          clearInterval(tempo);
+        };
+        var valor02 = document.getElementById("valor02");
+        valor02.onclick = () => {
+          analisarAlt(arrayDeQuestoes, valor02.value, correta);
+          clearInterval(tempo);
+        };
+        var valor03 = document.getElementById("valor03");
+        valor03.onclick = () => {
+          analisarAlt(arrayDeQuestoes, valor03.value, correta);
+          clearInterval(tempo);
+        };
+        var valor04 = document.getElementById("valor04");
+        valor04.onclick = () => {
+          analisarAlt(arrayDeQuestoes, valor04.value, correta);
+          clearInterval(tempo);
+        };
+      }, 1000);
     } else {
       return;
     }
