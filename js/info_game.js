@@ -295,10 +295,10 @@ function ApresentarQuestoes(arrayDeQuestoes, modo, modelo, ordem, acertos) {
     divPergunta.innerHTML = `${pergunta}<br>${parseInt(ordem) + 1}/${
       arrayDeQuestoes.length
     }`;
+    alternativas.forEach((element, i) => {
+      divAlternativas.innerHTML += `<button id="valor0${i}" value="${element}">${element}</button>`;
+    });
     if (modo == "infinidade") {
-      alternativas.forEach((element, i) => {
-        divAlternativas.innerHTML += `<button id="valor0${i}" value="${element}">${element}</button>`;
-      });
       var valor00 = document.getElementById("valor00");
       valor00.onclick = () => {
         analisarAlt(arrayDeQuestoes, valor00.value, correta, modo);
