@@ -27,6 +27,7 @@ function EntregaDeQuestoes(arrayQuestion, arrayAssuntos) {
       questoesDoJogo.push(questao);
     }
   }
+
   return questoesDoJogo;
 } //Entrega todos as questoes relacionados aos assuntos escolhidos
 
@@ -294,32 +295,31 @@ function ApresentarQuestoes(arrayDeQuestoes, modo, modelo, ordem, acertos) {
     divPergunta.innerHTML = `${pergunta}<br>${parseInt(ordem) + 1}/${
       arrayDeQuestoes.length
     }`;
-    alternativas.forEach((element, i) => {
-      divAlternativas.innerHTML += `<button id="valor0${i}" value="${element}">${element}</button>`;
-    });
-
-    if (modo === "infinidade") {
+    if (modo == "infinidade") {
+      alternativas.forEach((element, i) => {
+        divAlternativas.innerHTML += `<button id="valor0${i}" value="${element}">${element}</button>`;
+      });
       var valor00 = document.getElementById("valor00");
       valor00.onclick = () => {
-        analisarAlt(arrayDeQuestoes, valor00.value, correta);
+        analisarAlt(arrayDeQuestoes, valor00.value, correta, modo);
       };
       var valor01 = document.getElementById("valor01");
       valor01.onclick = () => {
-        analisarAlt(arrayDeQuestoes, valor01.value, correta);
+        analisarAlt(arrayDeQuestoes, valor01.value, correta, modo);
       };
       var valor02 = document.getElementById("valor02");
       valor02.onclick = () => {
-        analisarAlt(arrayDeQuestoes, valor02.value, correta);
+        analisarAlt(arrayDeQuestoes, valor02.value, correta, modo);
       };
       var valor03 = document.getElementById("valor03");
       valor03.onclick = () => {
-        analisarAlt(arrayDeQuestoes, valor03.value, correta);
+        analisarAlt(arrayDeQuestoes, valor03.value, correta, modo);
       };
       var valor04 = document.getElementById("valor04");
       valor04.onclick = () => {
-        analisarAlt(arrayDeQuestoes, valor04.value, correta);
+        analisarAlt(arrayDeQuestoes, valor04.value, correta, modo);
       };
-    } else if (modo === "umMinuto") {
+    } else if (modo == "umMinuto") {
       const span_temporizador = inform;
       var temporizador = 1;
       const tempo = setInterval(() => {
@@ -332,27 +332,27 @@ function ApresentarQuestoes(arrayDeQuestoes, modo, modelo, ordem, acertos) {
 
         var valor00 = document.getElementById("valor00");
         valor00.onclick = () => {
-          analisarAlt(arrayDeQuestoes, valor00.value, correta);
+          analisarAlt(arrayDeQuestoes, valor00.value, correta, modo);
           clearInterval(tempo);
         };
         var valor01 = document.getElementById("valor01");
         valor01.onclick = () => {
-          analisarAlt(arrayDeQuestoes, valor01.value, correta);
+          analisarAlt(arrayDeQuestoes, valor01.value, correta, modo);
           clearInterval(tempo);
         };
         var valor02 = document.getElementById("valor02");
         valor02.onclick = () => {
-          analisarAlt(arrayDeQuestoes, valor02.value, correta);
+          analisarAlt(arrayDeQuestoes, valor02.value, correta, modo);
           clearInterval(tempo);
         };
         var valor03 = document.getElementById("valor03");
         valor03.onclick = () => {
-          analisarAlt(arrayDeQuestoes, valor03.value, correta);
+          analisarAlt(arrayDeQuestoes, valor03.value, correta, modo);
           clearInterval(tempo);
         };
         var valor04 = document.getElementById("valor04");
         valor04.onclick = () => {
-          analisarAlt(arrayDeQuestoes, valor04.value, correta);
+          analisarAlt(arrayDeQuestoes, valor04.value, correta, modo);
           clearInterval(tempo);
         };
       }, 1000);
