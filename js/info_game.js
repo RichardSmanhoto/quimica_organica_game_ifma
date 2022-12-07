@@ -138,9 +138,15 @@ function ApresentarQuestoes(arrayDeQuestoes, modo, modelo, ordem, acertos) {
         }
       };
     } else if (modo === "umMinuto") {
+      opCorreta.setAttribute("disabled", "disabled");
+      opErrada.setAttribute("disabled", "disabled");
       const span_temporizador = inform;
       var temporizador = 1;
       const tempo = setInterval(() => {
+        if (temporizador === 1) {
+          opCorreta.removeAttribute("disabled");
+          opErrada.removeAttribute("disabled");
+        }
         if (temporizador >= 60) {
           clearInterval(tempo);
           window.location.assign("./jogoconcluido.html");
