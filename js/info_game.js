@@ -446,7 +446,7 @@ function analisarAlt(arrayDeQuestoes, resposta, correta, modo) {
         "corações",
         sessionStorage.getItem("corações") - 1
       );
-      if (sessionStorage.getItem("corações") - 1 === 0) {
+      if (sessionStorage.getItem("corações") == 0) {
         window.location.assign("./jogoconcluido.html");
       }
     }
