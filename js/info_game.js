@@ -295,10 +295,11 @@ function ApresentarQuestoes(arrayDeQuestoes, modo, modelo, ordem, acertos) {
     divPergunta.innerHTML = `${pergunta}<br>${parseInt(ordem) + 1}/${
       arrayDeQuestoes.length
     }`;
-    alternativas.forEach((element, i) => {
-      divAlternativas.innerHTML += `<button id="valor0${i}" value="${element}">${element}</button>`;
-    });
+
     if (modo == "infinidade") {
+      alternativas.forEach((element, i) => {
+        divAlternativas.innerHTML += `<button id="valor0${i}" value="${element}">${element}</button>`;
+      });
       var valor00 = document.getElementById("valor00");
       valor00.onclick = () => {
         analisarAlt(arrayDeQuestoes, valor00.value, correta, modo);
@@ -320,9 +321,25 @@ function ApresentarQuestoes(arrayDeQuestoes, modo, modelo, ordem, acertos) {
         analisarAlt(arrayDeQuestoes, valor04.value, correta, modo);
       };
     } else if (modo == "umMinuto") {
+      alternativas.forEach((element, i) => {
+        divAlternativas.innerHTML += `<button id="valor0${i}" value="${element}" disabled>${element}</button>`;
+      });
+      var valor00 = document.getElementById("valor00");
+      var valor01 = document.getElementById("valor01");
+      var valor02 = document.getElementById("valor02");
+      var valor03 = document.getElementById("valor03");
+      var valor04 = document.getElementById("valor04");
+
       const span_temporizador = inform;
       var temporizador = 1;
       const tempo = setInterval(() => {
+        if (temporizador === 1) {
+          valor00.removeAttribute("disabled");
+          valor01.removeAttribute("disabled");
+          valor02.removeAttribute("disabled");
+          valor03.removeAttribute("disabled");
+          valor04.removeAttribute("disabled");
+        }
         if (temporizador >= 60) {
           clearInterval(tempo);
           window.location.assign("./jogoconcluido.html");
@@ -330,33 +347,31 @@ function ApresentarQuestoes(arrayDeQuestoes, modo, modelo, ordem, acertos) {
         span_temporizador.innerHTML = temporizador;
         temporizador += 1;
 
-        var valor00 = document.getElementById("valor00");
         valor00.onclick = () => {
+          clearInterval(tempo);
           analisarAlt(arrayDeQuestoes, valor00.value, correta, modo);
-          clearInterval(tempo);
         };
-        var valor01 = document.getElementById("valor01");
         valor01.onclick = () => {
+          clearInterval(tempo);
           analisarAlt(arrayDeQuestoes, valor01.value, correta, modo);
-          clearInterval(tempo);
         };
-        var valor02 = document.getElementById("valor02");
         valor02.onclick = () => {
+          clearInterval(tempo);
           analisarAlt(arrayDeQuestoes, valor02.value, correta, modo);
-          clearInterval(tempo);
         };
-        var valor03 = document.getElementById("valor03");
         valor03.onclick = () => {
+          clearInterval(tempo);
           analisarAlt(arrayDeQuestoes, valor03.value, correta, modo);
-          clearInterval(tempo);
         };
-        var valor04 = document.getElementById("valor04");
         valor04.onclick = () => {
-          analisarAlt(arrayDeQuestoes, valor04.value, correta, modo);
           clearInterval(tempo);
+          analisarAlt(arrayDeQuestoes, valor04.value, correta, modo);
         };
       }, 1000);
     } else if (modo === "tresVidas") {
+      alternativas.forEach((element, i) => {
+        divAlternativas.innerHTML += `<button id="valor0${i}" value="${element}">${element}</button>`;
+      });
       var ordem = sessionStorage.getItem("ordem");
       if (ordem == 1) {
         sessionStorage.setItem("corações", 3);
