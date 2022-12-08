@@ -4,6 +4,8 @@
 }
 
 body {
+  background-image: url("../frames/background-pc.png");
+  background-size: auto 500px;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -24,4 +26,24 @@ body {
 #options-main a button {
   height: 50px;
   width: 200px;
+}
+
+.myButton {
+  background-color: #f6ffa2;
+  border-radius: 10px;
+  border: none;
+  display: inline-block;
+  cursor: pointer;
+  color: #000000;
+  font-family: Courier New;
+  font-size: 16px;
+  padding: 17px 70px;
+  text-decoration: none;
+}
+.myButton:hover {
+  background-color: #e8e189;
+}
+.myButton:active {
+  position: relative;
+  top: 1px;
 }
