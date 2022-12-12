@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@300;400;900&display=swap");
+* {
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  background-color: #e6f5ff;
+  padding: 10px;
+  border-bottom: 1px solid #a1acb3;
+}
+
+#btt-abrir {
+  color: black;
+  font-size: 25px;
+}
+
+#btt-voltar {
+  float: right;
+}
+
+#btt-fechar {
+  border-bottom: 1px solid #a1acb3;
+
+  color: black;
+  font-size: 25px;
+}
+
+#btt-abrir:hover,
+#btt-fechar:hover {
+  color: black;
+  background-color: #cfdce6;
+}
+
+nav {
+  margin: 0;
+  height: 100%;
+  width: 0px;
+  background-color: #e6f5ff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  overflow: hidden;
+  transition: width 0.3s;
+}
+
+nav a {
+  list-style-type: none;
+  padding: 12px 10px 8px 25px;
+  color: black;
+  font-size: 12px;
+  display: block;
+}
+
+nav li:hover {
+  color: black;
+  background-color: #cfdce6;
+}
+
+nav ul li {
+  list-style-type: none;
+  font-family: "Roboto", sans-serif;
+}
+
+main {
+  padding-left: 250px;
+  padding-right: 250px;
+
+  transition: margin-left 0.5s;
+}
+
+#menu-assuntos {
+  padding-left: 0;
+}

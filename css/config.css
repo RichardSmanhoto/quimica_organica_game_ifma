@@ -6,6 +6,7 @@
 }
 
 main {
+  background-color: #b2e5f7;
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -14,18 +15,67 @@ main {
 }
 
 form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  background-color: #e6e7e0;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 100px 50px;
 }
 
 form button {
+  margin-left: 20%;
   margin-top: 20px;
-  height: 50px;
-  width: 100px;
+  background-color: #f6ffa2;
+  border-radius: 10px;
+  border: none;
+  display: inline-block;
+  cursor: pointer;
+  color: #000000;
+  font-family: Courier New;
+  font-size: 12px;
+  padding: 17px 70px;
+  text-decoration: none;
+}
+
+form button:hover {
+  background-color: #e8e189;
+}
+
+form button:active {
+  position: relative;
+  top: 1px;
 }
 
 #assuntos-select {
   width: 100cm;
+}
+
+#quant_questoes {
+  margin: 5px;
+  margin-left: 7px;
+  width: 250px;
+  height: 36px;
+  border: none;
+}
+
+#quant_questoes {
+  border: none;
+}
+#modelo-select {
+  margin-left: 19px;
+  width: 250px;
+}
+
+#name {
+  padding-left: 5px;
+  margin: 5px;
+  margin-left: 29px;
+  width: 245px;
+  height: 36px;
+  border: none;
+}
+
+#modo-select {
+  width: 251px;
+  margin-left: 31px;
+  margin-bottom: 5px;
 }

@@ -27,6 +27,7 @@ function EntregaDeQuestoes(arrayQuestion, arrayAssuntos) {
       questoesDoJogo.push(questao);
     }
   }
+
   return questoesDoJogo;
 } //Entrega todos as questoes relacionados aos assuntos escolhidos
 
@@ -65,8 +66,10 @@ function ApresentarQuestoes(arrayDeQuestoes, modo, modelo, ordem, acertos) {
   const divAlternativas = document.getElementById("options");
   const opCorreta = document.getElementById("correto");
   const opErrada = document.getElementById("errado");
+  const header = document.getElementById("header");
 
   const inform = document.getElementById("info");
+  const hearts = document.getElementById("hearts");
 
   var pergunta = arrayDeQuestoes[ordem].pergunta;
   var alternativas = Alternativas(arrayDeQuestoes[ordem]);
@@ -75,9 +78,9 @@ function ApresentarQuestoes(arrayDeQuestoes, modo, modelo, ordem, acertos) {
   if (modelo === "verdadeiroOuFalso") {
     var RandomAlt = getNumberRandom(0, alternativas.length);
     var resposta = alternativas[RandomAlt];
-    divPergunta.innerHTML = `${pergunta} Resposta: ${resposta}?<br>${
+    divPergunta.innerHTML = `<p id="pergunta">${pergunta}</p> <p id="resposta"><b>Resposta:</b> ${resposta}?</p><br><p id="ordem">${
       ordem + 1
-    }/${arrayDeQuestoes.length}`;
+    }/${arrayDeQuestoes.length}</p>`;
 
     if (modo === "infinidade") {
       opCorreta.onclick = () => {
@@ -86,9 +89,11 @@ function ApresentarQuestoes(arrayDeQuestoes, modo, modelo, ordem, acertos) {
           ordem += 1;
           if (ordem === arrayDeQuestoes.length) {
             if (estado === "treinar") {
+              criarDados(modelo, modo, acertos, arrayDeQuestoes.length);
               window.location.assign("./treinoconcluido.html");
             }
             if (estado === "jogar") {
+              criarDados(modelo, modo, acertos, arrayDeQuestoes.length);
               window.location.assign("./jogoconcluido.html");
             }
           } else {
@@ -98,9 +103,11 @@ function ApresentarQuestoes(arrayDeQuestoes, modo, modelo, ordem, acertos) {
           ordem += 1;
           if (ordem === arrayDeQuestoes.length) {
             if (estado === "treinar") {
+              criarDados(modelo, modo, acertos, arrayDeQuestoes.length);
               window.location.assign("./treinoconcluido.html");
             }
             if (estado === "jogar") {
+              criarDados(modelo, modo, acertos, arrayDeQuestoes.length);
               window.location.assign("./jogoconcluido.html");
             }
           } else {
@@ -114,9 +121,11 @@ function ApresentarQuestoes(arrayDeQuestoes, modo, modelo, ordem, acertos) {
           ordem += 1;
           if (ordem === arrayDeQuestoes.length) {
             if (estado === "treinar") {
+              criarDados(modelo, modo, acertos, arrayDeQuestoes.length);
               window.location.assign("./treinoconcluido.html");
             }
             if (estado === "jogar") {
+              criarDados(modelo, modo, acertos, arrayDeQuestoes.length);
               window.location.assign("./jogoconcluido.html");
             }
           } else {
@@ -126,9 +135,11 @@ function ApresentarQuestoes(arrayDeQuestoes, modo, modelo, ordem, acertos) {
           ordem += 1;
           if (ordem === arrayDeQuestoes.length) {
             if (estado === "treinar") {
+              criarDados(modelo, modo, acertos, arrayDeQuestoes.length);
               window.location.assign("../treinoconcluido.html");
             }
             if (estado === "jogar") {
+              criarDados(modelo, modo, acertos, arrayDeQuestoes.length);
               window.location.assign("./jogoconcluido.html");
             }
           } else {
@@ -137,14 +148,25 @@ function ApresentarQuestoes(arrayDeQuestoes, modo, modelo, ordem, acertos) {
         }
       };
     } else if (modo === "umMinuto") {
+      header.innerHTML = "<p><b><u>Vamos! 1 minuto no relógio</b></u></p>";
+
+      opCorreta.setAttribute("disabled", "disabled");
+      opErrada.setAttribute("disabled", "disabled");
       const span_temporizador = inform;
       var temporizador = 1;
       const tempo = setInterval(() => {
+        if (temporizador === 1) {
+          opCorreta.removeAttribute("disabled");
+          opErrada.removeAttribute("disabled");
+        }
         if (temporizador >= 60) {
           clearInterval(tempo);
           window.location.assign("./jogoconcluido.html");
         }
-        span_temporizador.innerHTML = temporizador;
+        span_temporizador.innerHTML =
+          temporizador === 1
+            ? `<p id="tempo"><b>${temporizador} segundo</b></p>`
+            : `<p id="tempo"><b>${temporizador} segundos</b></p>`;
         temporizador += 1;
 
         opCorreta.onclick = () => {
@@ -155,9 +177,11 @@ function ApresentarQuestoes(arrayDeQuestoes, modo, modelo, ordem, acertos) {
             acertos += 1;
             if (ordem === arrayDeQuestoes.length) {
               if (estado === "treinar") {
+                criarDados(modelo, modo, acertos, arrayDeQuestoes.length);
                 window.location.assign("./treinoconcluido.html");
               }
               if (estado === "jogar") {
+                criarDados(modelo, modo, acertos, arrayDeQuestoes.length);
                 window.location.assign("./jogoconcluido.html");
               }
             } else {
@@ -172,9 +196,11 @@ function ApresentarQuestoes(arrayDeQuestoes, modo, modelo, ordem, acertos) {
           } else {
             if (ordem === arrayDeQuestoes.length) {
               if (estado === "treinar") {
+                criarDados(modelo, modo, acertos, arrayDeQuestoes.length);
                 window.location.assign("./treinoconcluido.html");
               }
               if (estado === "jogar") {
+                criarDados(modelo, modo, acertos, arrayDeQuestoes.length);
                 window.location.assign("./jogoconcluido.html");
               }
             } else {
@@ -196,9 +222,11 @@ function ApresentarQuestoes(arrayDeQuestoes, modo, modelo, ordem, acertos) {
             acertos += 1;
             if (ordem === arrayDeQuestoes.length) {
               if (estado === "treinar") {
+                criarDados(modelo, modo, acertos, arrayDeQuestoes.length);
                 window.location.assign("./treinoconcluido.html");
               }
               if (estado === "jogar") {
+                criarDados(modelo, modo, acertos, arrayDeQuestoes.length);
                 window.location.assign("./jogoconcluido.html");
               }
             } else {
@@ -213,9 +241,11 @@ function ApresentarQuestoes(arrayDeQuestoes, modo, modelo, ordem, acertos) {
           } else {
             if (ordem === arrayDeQuestoes.length) {
               if (estado === "treinar") {
+                criarDados(modelo, modo, acertos, arrayDeQuestoes.length);
                 window.location.assign("./treinoconcluido.html");
               }
               if (estado === "jogar") {
+                criarDados(modelo, modo, acertos, arrayDeQuestoes.length);
                 window.location.assign("./jogoconcluido.html");
               }
             } else {
@@ -235,9 +265,8 @@ function ApresentarQuestoes(arrayDeQuestoes, modo, modelo, ordem, acertos) {
         sessionStorage.setItem("corações", 3);
       }
       var quant_coracao = sessionStorage.getItem("corações");
-      const span_hearts = inform;
       const carregarCoracoes = mostrarCoracoes(
-        span_hearts,
+        hearts,
         quant_coracao,
         "../frames/heart.png"
       );
@@ -248,6 +277,7 @@ function ApresentarQuestoes(arrayDeQuestoes, modo, modelo, ordem, acertos) {
           //acertou
           acertos += 1;
           if (ordem === arrayDeQuestoes.length) {
+            criarDados(modelo, modo, acertos, arrayDeQuestoes.length);
             window.location.assign("./jogoconcluido.html");
           } else {
             ApresentarQuestoes(questoesParaJogar, modo, modelo, ordem, acertos);
@@ -256,9 +286,11 @@ function ApresentarQuestoes(arrayDeQuestoes, modo, modelo, ordem, acertos) {
           // errou
           sessionStorage.setItem("corações", quant_coracao - 1);
           if (quant_coracao - 1 === 0) {
+            criarDados(modelo, modo, acertos, arrayDeQuestoes.length);
             window.location.assign("./jogoconcluido.html");
           }
           if (ordem === arrayDeQuestoes.length) {
+            criarDados(modelo, modo, acertos, arrayDeQuestoes.length);
             window.location.assign("./jogoconcluido.html");
           } else {
             ApresentarQuestoes(questoesParaJogar, modo, modelo, ordem, acertos);
@@ -271,6 +303,7 @@ function ApresentarQuestoes(arrayDeQuestoes, modo, modelo, ordem, acertos) {
           //acertou
           acertos += 1;
           if (ordem === arrayDeQuestoes.length) {
+            criarDados(modelo, modo, acertos, arrayDeQuestoes.length);
             window.location.assign("./jogoconcluido.html");
           } else {
             ApresentarQuestoes(questoesParaJogar, modo, modelo, ordem, acertos);
@@ -279,9 +312,11 @@ function ApresentarQuestoes(arrayDeQuestoes, modo, modelo, ordem, acertos) {
           //errou
           sessionStorage.setItem("corações", quant_coracao - 1);
           if (quant_coracao - 1 === 0) {
+            criarDados(modelo, modo, acertos, arrayDeQuestoes.length);
             window.location.assign("./jogoconcluido.html");
           }
           if (ordem === arrayDeQuestoes.length) {
+            criarDados(modelo, modo, acertos, arrayDeQuestoes.length);
             window.location.assign("./jogoconcluido.html");
           } else {
             ApresentarQuestoes(questoesParaJogar, modo, modelo, ordem, acertos);
@@ -291,72 +326,89 @@ function ApresentarQuestoes(arrayDeQuestoes, modo, modelo, ordem, acertos) {
     }
   } else if (modelo === "Alternative") {
     divAlternativas.innerHTML = "";
-    divPergunta.innerHTML = `${pergunta}<br>${parseInt(ordem) + 1}/${
-      arrayDeQuestoes.length
-    }`;
-    alternativas.forEach((element, i) => {
-      divAlternativas.innerHTML += `<button id="valor0${i}" value="${element}">${element}</button>`;
-    });
+    divPergunta.innerHTML = `<p>${pergunta}</p><br><p id="ordem">${
+      parseInt(ordem) + 1
+    }/${arrayDeQuestoes.length}</p>`;
 
-    if (modo === "infinidade") {
+    if (modo == "infinidade") {
+      alternativas.forEach((element, i) => {
+        divAlternativas.innerHTML += `<button id="valor0${i}" value="${element}">${element}</button>`;
+      });
       var valor00 = document.getElementById("valor00");
       valor00.onclick = () => {
-        analisarAlt(arrayDeQuestoes, valor00.value, correta);
+        analisarAlt(arrayDeQuestoes, valor00.value, correta, modo, modelo);
       };
       var valor01 = document.getElementById("valor01");
       valor01.onclick = () => {
-        analisarAlt(arrayDeQuestoes, valor01.value, correta);
+        analisarAlt(arrayDeQuestoes, valor01.value, correta, modo, modelo);
       };
       var valor02 = document.getElementById("valor02");
       valor02.onclick = () => {
-        analisarAlt(arrayDeQuestoes, valor02.value, correta);
+        analisarAlt(arrayDeQuestoes, valor02.value, correta, modo, modelo);
       };
       var valor03 = document.getElementById("valor03");
       valor03.onclick = () => {
-        analisarAlt(arrayDeQuestoes, valor03.value, correta);
+        analisarAlt(arrayDeQuestoes, valor03.value, correta, modo, modelo);
       };
       var valor04 = document.getElementById("valor04");
       valor04.onclick = () => {
-        analisarAlt(arrayDeQuestoes, valor04.value, correta);
+        analisarAlt(arrayDeQuestoes, valor04.value, correta, modo, modelo);
       };
-    } else if (modo === "umMinuto") {
+    } else if (modo == "umMinuto") {
+      alternativas.forEach((element, i) => {
+        divAlternativas.innerHTML += `<button id="valor0${i}" value="${element}" disabled>${element}</button>`;
+      });
+      var valor00 = document.getElementById("valor00");
+      var valor01 = document.getElementById("valor01");
+      var valor02 = document.getElementById("valor02");
+      var valor03 = document.getElementById("valor03");
+      var valor04 = document.getElementById("valor04");
+
       const span_temporizador = inform;
       var temporizador = 1;
       const tempo = setInterval(() => {
+        if (temporizador === 1) {
+          valor00.removeAttribute("disabled");
+          valor01.removeAttribute("disabled");
+          valor02.removeAttribute("disabled");
+          valor03.removeAttribute("disabled");
+          valor04.removeAttribute("disabled");
+        }
         if (temporizador >= 60) {
           clearInterval(tempo);
           window.location.assign("./jogoconcluido.html");
         }
-        span_temporizador.innerHTML = temporizador;
+        span_temporizador.innerHTML =
+          temporizador === 1
+            ? `<p id="tempo"><b>${temporizador} segundo</b></p>`
+            : `<p id="tempo"><b>${temporizador} segundos</b></p>`;
         temporizador += 1;
 
-        var valor00 = document.getElementById("valor00");
         valor00.onclick = () => {
-          analisarAlt(arrayDeQuestoes, valor00.value, correta);
           clearInterval(tempo);
+          analisarAlt(arrayDeQuestoes, valor00.value, correta, modo, modelo);
         };
-        var valor01 = document.getElementById("valor01");
         valor01.onclick = () => {
-          analisarAlt(arrayDeQuestoes, valor01.value, correta);
           clearInterval(tempo);
+          analisarAlt(arrayDeQuestoes, valor01.value, correta, modo, modelo);
         };
-        var valor02 = document.getElementById("valor02");
         valor02.onclick = () => {
-          analisarAlt(arrayDeQuestoes, valor02.value, correta);
           clearInterval(tempo);
+          analisarAlt(arrayDeQuestoes, valor02.value, correta, modo, modelo);
         };
-        var valor03 = document.getElementById("valor03");
         valor03.onclick = () => {
-          analisarAlt(arrayDeQuestoes, valor03.value, correta);
           clearInterval(tempo);
+          analisarAlt(arrayDeQuestoes, valor03.value, correta, modo, modelo);
         };
-        var valor04 = document.getElementById("valor04");
         valor04.onclick = () => {
-          analisarAlt(arrayDeQuestoes, valor04.value, correta);
           clearInterval(tempo);
+          analisarAlt(arrayDeQuestoes, valor04.value, correta, modo, modelo);
         };
       }, 1000);
     } else if (modo === "tresVidas") {
+      alternativas.forEach((element, i) => {
+        divAlternativas.innerHTML += `<button id="valor0${i}" value="${element}">${element}</button>`;
+      });
       var ordem = sessionStorage.getItem("ordem");
       if (ordem == 1) {
         sessionStorage.setItem("corações", 3);
@@ -371,23 +423,23 @@ function ApresentarQuestoes(arrayDeQuestoes, modo, modelo, ordem, acertos) {
 
       var valor00 = document.getElementById("valor00");
       valor00.onclick = () => {
-        analisarAlt(arrayDeQuestoes, valor00.value, correta, modo);
+        analisarAlt(arrayDeQuestoes, valor00.value, correta, modo, modelo);
       };
       var valor01 = document.getElementById("valor01");
       valor01.onclick = () => {
-        analisarAlt(arrayDeQuestoes, valor01.value, correta, modo);
+        analisarAlt(arrayDeQuestoes, valor01.value, correta, modo, modelo);
       };
       var valor02 = document.getElementById("valor02");
       valor02.onclick = () => {
-        analisarAlt(arrayDeQuestoes, valor02.value, correta, modo);
+        analisarAlt(arrayDeQuestoes, valor02.value, correta, modo, modelo);
       };
       var valor03 = document.getElementById("valor03");
       valor03.onclick = () => {
-        analisarAlt(arrayDeQuestoes, valor03.value, correta, modo);
+        analisarAlt(arrayDeQuestoes, valor03.value, correta, modo, modelo);
       };
       var valor04 = document.getElementById("valor04");
       valor04.onclick = () => {
-        analisarAlt(arrayDeQuestoes, valor04.value, correta, modo);
+        analisarAlt(arrayDeQuestoes, valor04.value, correta, modo, modelo);
       };
     }
   }
@@ -412,7 +464,7 @@ function mostrarCoracoes(element, index_max, img) {
   }
 }
 
-function analisarAlt(arrayDeQuestoes, resposta, correta, modo) {
+function analisarAlt(arrayDeQuestoes, resposta, correta, modo, modelo) {
   var acertos = sessionStorage.getItem("acertos");
   var ordem = sessionStorage.getItem("ordem");
 
@@ -421,7 +473,18 @@ function analisarAlt(arrayDeQuestoes, resposta, correta, modo) {
     sessionStorage.setItem("ordem", parseInt(ordem) + 1);
 
     if (ordem >= arrayDeQuestoes.length) {
-      window.location.assign("./jogoconcluido.html");
+      if (estado === "treinar") {
+        criarDados(null, modo, acertos, arrayDeQuestoes.length);
+        window.location.assign("./treinoconcluido.html");
+      } else {
+        criarDados(
+          localStorage.getItem("nome"),
+          modo,
+          acertos,
+          arrayDeQuestoes.length
+        );
+        window.location.assign("./jogoconcluido.html");
+      }
     } else {
       ApresentarQuestoes(questoesParaJogar, modo, modelo, ordem, acertos);
     }
@@ -431,18 +494,61 @@ function analisarAlt(arrayDeQuestoes, resposta, correta, modo) {
         "corações",
         sessionStorage.getItem("corações") - 1
       );
-      if (sessionStorage.getItem("corações") - 1 === 0) {
-        window.location.assign("./jogoconcluido.html");
+      if (sessionStorage.getItem("corações") == 0) {
+        if (estado === "treinar") {
+          criarDados(null, modo, acertos, arrayDeQuestoes.length);
+          window.location.assign("./treinoconcluido.html");
+        } else {
+          criarDados(
+            localStorage.getItem("nome"),
+            modo,
+            acertos,
+            arrayDeQuestoes.length
+          );
+          window.location.assign("./jogoconcluido.html");
+        }
       }
     }
     if (ordem >= arrayDeQuestoes.length) {
-      window.location.assign("./jogoconcluido.html");
+      if (estado === "treinar") {
+        criarDados(null, modo, acertos, arrayDeQuestoes.length);
+        window.location.assign("./treinoconcluido.html");
+      } else {
+        criarDados(
+          localStorage.getItem("nome"),
+          modo,
+          acertos,
+          arrayDeQuestoes.length
+        );
+        window.location.assign("./jogoconcluido.html");
+      }
     }
   }
   sessionStorage.setItem("ordem", parseInt(ordem) + 1);
   if (ordem >= arrayDeQuestoes.length) {
-    window.location.assign("./jogoconcluido.html");
+    if (estado === "treinar") {
+      criarDados(null, modo, acertos, arrayDeQuestoes.length);
+      window.location.assign("./treinoconcluido.html");
+    } else {
+      criarDados(
+        localStorage.getItem("nome"),
+        modo,
+        acertos,
+        arrayDeQuestoes.length
+      );
+      window.location.assign("./jogoconcluido.html");
+    }
   } else {
     ApresentarQuestoes(questoesParaJogar, modo, modelo, ordem, acertos);
   }
+}
+
+function criarDados(nome, modo, acertos, totalDeQuestao) {
+  var dados = {
+    nome: nome,
+    modo: modo,
+    acertos: acertos,
+    totalDeQuestao: totalDeQuestao,
+  };
+  sessionStorage.setItem("dados", JSON.stringify(dados));
 }

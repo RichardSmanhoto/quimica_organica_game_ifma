@@ -5,18 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jogue e Aprenda!</title>
+    <link rel="stylesheet" href="../css/twooptions.css">
   </head>
   <body>
     <main class="container">
-      <form></form>
+      <div id="header"></div>
       <div id="pergunta"></div>
       <hr />
       <div id="options">
-        <button id="correto" value="correto">Correto</button>
-        <button id="errado" value="errado">Falso</button>
+        <button id="correto" value="correto"><img src="../frames/check.webp" alt="" height="70px" width="75px"></button>
+        <button id="errado" value="errado"><img src="../frames/false.webp" alt="" height="70px" width="75px"></button>
         </div>
       </form>
       <span id="info"></span>
+      <div id="hearts"></div>
     </main>
 
     <script type="module" src="../js/info_game.js"></script>
