@@ -61,3 +61,7 @@ main {
   padding: 10px;
   transition: margin-left 0.5s;
 }
+
+#h1estuda {
+  font-family: "Times New Roman", Times, serif;
+}
