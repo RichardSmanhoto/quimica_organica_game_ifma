@@ -6,7 +6,6 @@
 }
 
 main {
-<<<<<<< HEAD
   background: rgb(64, 108, 194);
   background: linear-gradient(
     90deg,
@@ -14,9 +13,7 @@ main {
     rgba(65, 128, 171, 1) 40%,
     rgba(61, 184, 167, 1) 85%
   );
-=======
-  background-color: #b2e5f7;
->>>>>>> 8b6a8bb9af118ac41c1ae17c769bfe34cc495e3b
+
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -34,7 +31,6 @@ form {
 form button {
   margin-left: 20%;
   margin-top: 20px;
-<<<<<<< HEAD
   background-color: #1a435e;
   border-radius: 5px;
   border: none;
@@ -42,26 +38,12 @@ form button {
   cursor: pointer;
   color: #ffff;
   font-size: 14px;
-=======
-  background-color: #f6ffa2;
-  border-radius: 10px;
-  border: none;
-  display: inline-block;
-  cursor: pointer;
-  color: #000000;
-  font-family: Courier New;
-  font-size: 12px;
->>>>>>> 8b6a8bb9af118ac41c1ae17c769bfe34cc495e3b
   padding: 17px 70px;
   text-decoration: none;
 }
 
 form button:hover {
-<<<<<<< HEAD
   background-color: #1e4c6b;
-=======
-  background-color: #e8e189;
->>>>>>> 8b6a8bb9af118ac41c1ae17c769bfe34cc495e3b
 }
 
 form button:active {
