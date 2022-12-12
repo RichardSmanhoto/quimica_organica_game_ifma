@@ -1,11 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
 * {
   padding: 0;
   margin: 0;
 }
 
-body {
+#meio {
   background-image: url("../frames/background-pc.png");
-  background-size: auto 500px;
+  background-repeat: repeat;
+  background-position: center;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -13,10 +16,13 @@ body {
   justify-content: center;
 }
 
+main {
+  margin-right: 90px;
+}
+
 #options-main {
   display: flex;
   flex-direction: column;
-  margin: 20px;
 }
 
 #options-main a {
@@ -29,19 +35,17 @@ body {
 }
 
 .myButton {
-  background-color: #f6ffa2;
-  border-radius: 10px;
+  background-color: #37ab98;
+  border-radius: 5px;
   border: none;
-  display: inline-block;
   cursor: pointer;
   color: #000000;
-  font-family: Courier New;
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
-  padding: 17px 70px;
   text-decoration: none;
 }
 .myButton:hover {
-  background-color: #e8e189;
+  background-color: #2f9181;
 }
 .myButton:active {
   position: relative;
