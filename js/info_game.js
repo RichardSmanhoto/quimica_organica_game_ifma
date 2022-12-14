@@ -478,7 +478,7 @@ function analisarAlt(arrayDeQuestoes, resposta, correta, modo, modelo) {
         window.location.assign("./treinoconcluido.html");
       } else {
         criarDados(
-          localStorage.getItem("nome"),
+          JSON.parse(localStorage.getItem("nome")),
           modo,
           acertos,
           arrayDeQuestoes.length
@@ -500,7 +500,7 @@ function analisarAlt(arrayDeQuestoes, resposta, correta, modo, modelo) {
           window.location.assign("./treinoconcluido.html");
         } else {
           criarDados(
-            localStorage.getItem("nome"),
+            JSON.parse(localStorage.getItem("nome")),
             modo,
             acertos,
             arrayDeQuestoes.length
@@ -515,7 +515,7 @@ function analisarAlt(arrayDeQuestoes, resposta, correta, modo, modelo) {
         window.location.assign("./treinoconcluido.html");
       } else {
         criarDados(
-          localStorage.getItem("nome"),
+          JSON.parse(localStorage.getItem("nome")),
           modo,
           acertos,
           arrayDeQuestoes.length
@@ -531,7 +531,7 @@ function analisarAlt(arrayDeQuestoes, resposta, correta, modo, modelo) {
       window.location.assign("./treinoconcluido.html");
     } else {
       criarDados(
-        localStorage.getItem("nome"),
+        JSON.parse(localStorage.getItem("nome")),
         modo,
         acertos,
         arrayDeQuestoes.length
