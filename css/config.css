@@ -24,12 +24,13 @@ form {
   background-color: #e6e7e0;
   border: 1px solid black;
   border-radius: 5px;
-  padding: 100px 50px;
+  padding: 150px 0 10px 0;
 }
 
 form button {
-  margin-left: 20%;
-  margin-top: 20px;
+  margin-left: 35%;
+  margin-top: 10px;
+  margin-bottom: 0;
   background-color: #1a435e;
   border-radius: 5px;
   border: none;
@@ -66,6 +67,7 @@ form button:active {
   border: none;
 }
 #modelo-select {
+  margin-bottom: 200px;
   margin-left: 19px;
   width: 250px;
 }
@@ -83,4 +85,9 @@ form button:active {
   width: 251px;
   margin-left: 31px;
   margin-bottom: 5px;
+}
+
+#controls {
+  padding: 0 100px 0 100px;
+  border-bottom: 1px solid black;
 }

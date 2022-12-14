@@ -9,17 +9,27 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #b2e5f7;
+  background: rgb(64, 108, 194);
+  background: linear-gradient(
+    90deg,
+    rgba(64, 108, 194, 1) 0%,
+    rgba(65, 128, 171, 1) 40%,
+    rgba(61, 184, 167, 1) 85%
+  );
 }
 
 main {
   margin: 200px;
   background-color: #e6e7e0;
+  padding: 50px 0 50px 0;
   padding: 50px;
-  border: 1px solid black;
 }
 
-#pergunta {
+#pergunt {
+  font-size: 16px;
+}
+
+#respost {
   font-size: 16px;
 }
 

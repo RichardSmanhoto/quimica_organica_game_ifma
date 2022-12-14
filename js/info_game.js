@@ -78,7 +78,7 @@ function ApresentarQuestoes(arrayDeQuestoes, modo, modelo, ordem, acertos) {
   if (modelo === "verdadeiroOuFalso") {
     var RandomAlt = getNumberRandom(0, alternativas.length);
     var resposta = alternativas[RandomAlt];
-    divPergunta.innerHTML = `<p id="pergunta">${pergunta}</p> <p id="resposta"><b>Resposta:</b> ${resposta}?</p><br><p id="ordem">${
+    divPergunta.innerHTML = `<p id="pergunt">${pergunta}</p> <p id="respost"><b>Resposta:</b> ${resposta}?</p><br><p id="ordem">${
       ordem + 1
     }/${arrayDeQuestoes.length}</p>`;
 

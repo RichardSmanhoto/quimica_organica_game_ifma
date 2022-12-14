@@ -11,96 +11,97 @@
   <body>
     <main class="config">
       <form id="form">
-        <div class="form-control">
-          <label for="name">Nome:</label>
-          <input
-            type="text"
-            name="name"
-            id="name"
-            placeholder="Digite seu nome"
-            required
-          />
-        </div>
-        <div class="form-control">
-          <label for="assuntos-select">Assunto(s):</label>
-          <select
-            id="assuntos-select"
-            name="assuntos-select"
-            placeholder="Escolha aqui"
-            data-search="true"
-            data-silent-initial-value-set="true"
-            multiple
-            required
-          >
-            <option value="Introdução à química orgânica">
-              Introdução à química orgânica
-            </option>
-            <option value="O que a química orgânica estuda?">
-              O que a química orgânica estuda
-            </option>
-            <option value="O que são compostos orgânicos?">
-              O que são compostos orgânicos
-            </option>
-            <option
-              value="Características do átomo de carbono: Postulados de Kekulé"
+        <div id="controls">
+          <div class="form-control">
+            <label for="name">Nome:</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Digite seu nome"
+              required
+            />
+          </div>
+          <div class="form-control">
+            <label for="assuntos-select">Assunto(s):</label>
+            <select
+              id="assuntos-select"
+              name="assuntos-select"
+              placeholder="Escolha aqui"
+              data-search="true"
+              data-silent-initial-value-set="true"
+              multiple
+              required
             >
-              Características do átomo de carbono: Postulados de Kekulé
-            </option>
-            <option value="Representação das cadeias carbônicas">
-              Representação das cadeias carbônicas
-            </option>
-            <option value="Classificação dos carbonos">
-              Classificação dos carbonos
-            </option>
-            <option value="Classificação das cadeias carbônicas">
-              Classificação das cadeias carbônicas
-            </option>
-            <option value="Introdução às funções orgânicas">
-              Introdução às funções orgânicas
-            </option>
-            <option value="Isomeria">Isomeria</option>
-          </select>
-        </div>
+              <option value="Introdução à química orgânica">
+                Introdução à química orgânica
+              </option>
+              <option value="O que a química orgânica estuda?">
+                O que a química orgânica estuda
+              </option>
+              <option value="O que são compostos orgânicos?">
+                O que são compostos orgânicos
+              </option>
+              <option
+                value="Características do átomo de carbono: Postulados de Kekulé"
+              >
+                Características do átomo de carbono: Postulados de Kekulé
+              </option>
+              <option value="Representação das cadeias carbônicas">
+                Representação das cadeias carbônicas
+              </option>
+              <option value="Classificação dos carbonos">
+                Classificação dos carbonos
+              </option>
+              <option value="Classificação das cadeias carbônicas">
+                Classificação das cadeias carbônicas
+              </option>
+              <option value="Introdução às funções orgânicas">
+                Introdução às funções orgânicas
+              </option>
+              <option value="Isomeria">Isomeria</option>
+            </select>
+          </div>
 
-        <div class="form-control">
-          <label for="quant_questoes">Questões:</label>
-          <select
-            name="quant_questoes"
-            id="quant_questoes"
-            disabled
-            required
-          ></select>
-        </div>
+          <div class="form-control">
+            <label for="quant_questoes">Questões:</label>
+            <select
+              name="quant_questoes"
+              id="quant_questoes"
+              disabled
+              required
+            ></select>
+          </div>
 
-        <div class="form-control">
-          <label for="modo-select">Modo:</label>
-          <select
-            name="modo-select"
-            id="modo-select"
-            placeholder="Escolha aqui"
-            data-silent-initial-value-set="true"
-            required
-          >
-            <option value="1">Infinidade</option>
-            <option value="2">1 minuto</option>
-            <option value="3">3 vidas</option>
-          </select>
-        </div>
+          <div class="form-control">
+            <label for="modo-select">Modo:</label>
+            <select
+              name="modo-select"
+              id="modo-select"
+              placeholder="Escolha aqui"
+              data-silent-initial-value-set="true"
+              required
+            >
+              <option value="1">Infinidade</option>
+              <option value="2">1 minuto</option>
+              <option value="3">3 vidas</option>
+            </select>
+          </div>
 
-        <div class="form-control">
-          <label for="modelo-select">Modelo:</label>
-          <select
-            name="modelo-select"
-            id="modelo-select"
-            placeholder="Escolha aqui"
-            data-silent-initial-value-set="true"
-            required
-          >
-            <option value="1">Verdadeiro ou falso</option>
-            <option value="2">Cinco alternativas</option>
-          </select>
+          <div class="form-control">
+            <label for="modelo-select">Modelo:</label>
+            <select
+              name="modelo-select"
+              id="modelo-select"
+              placeholder="Escolha aqui"
+              data-silent-initial-value-set="true"
+              required
+            >
+              <option value="1">Verdadeiro ou falso</option>
+              <option value="2">Cinco alternativas</option>
+            </select>
+          </div>
         </div>
-
         <button type="submit" id="btt-submit">Iniciar</button>
       </form>
     </main>
