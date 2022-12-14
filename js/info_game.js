@@ -89,11 +89,21 @@ function ApresentarQuestoes(arrayDeQuestoes, modo, modelo, ordem, acertos) {
           ordem += 1;
           if (ordem === arrayDeQuestoes.length) {
             if (estado === "treinar") {
-              criarDados(modelo, modo, acertos, arrayDeQuestoes.length);
+              criarDados(
+                JSON.parse(localStorage.getItem("nome")),
+                modo,
+                acertos,
+                arrayDeQuestoes.length
+              );
               window.location.assign("./treinoconcluido.html");
             }
             if (estado === "jogar") {
-              criarDados(modelo, modo, acertos, arrayDeQuestoes.length);
+              criarDados(
+                JSON.parse(localStorage.getItem("nome")),
+                modo,
+                acertos,
+                arrayDeQuestoes.length
+              );
               window.location.assign("./jogoconcluido.html");
             }
           } else {
@@ -103,11 +113,16 @@ function ApresentarQuestoes(arrayDeQuestoes, modo, modelo, ordem, acertos) {
           ordem += 1;
           if (ordem === arrayDeQuestoes.length) {
             if (estado === "treinar") {
-              criarDados(modelo, modo, acertos, arrayDeQuestoes.length);
+              criarDados(null, modo, acertos, arrayDeQuestoes.length);
               window.location.assign("./treinoconcluido.html");
             }
             if (estado === "jogar") {
-              criarDados(modelo, modo, acertos, arrayDeQuestoes.length);
+              criarDados(
+                JSON.parse(localStorage.getItem("nome")),
+                modo,
+                acertos,
+                arrayDeQuestoes.length
+              );
               window.location.assign("./jogoconcluido.html");
             }
           } else {
@@ -121,11 +136,16 @@ function ApresentarQuestoes(arrayDeQuestoes, modo, modelo, ordem, acertos) {
           ordem += 1;
           if (ordem === arrayDeQuestoes.length) {
             if (estado === "treinar") {
-              criarDados(modelo, modo, acertos, arrayDeQuestoes.length);
+              criarDados(null, modo, acertos, arrayDeQuestoes.length);
               window.location.assign("./treinoconcluido.html");
             }
             if (estado === "jogar") {
-              criarDados(modelo, modo, acertos, arrayDeQuestoes.length);
+              criarDados(
+                JSON.parse(localStorage.getItem("nome")),
+                modo,
+                acertos,
+                arrayDeQuestoes.length
+              );
               window.location.assign("./jogoconcluido.html");
             }
           } else {
@@ -135,11 +155,16 @@ function ApresentarQuestoes(arrayDeQuestoes, modo, modelo, ordem, acertos) {
           ordem += 1;
           if (ordem === arrayDeQuestoes.length) {
             if (estado === "treinar") {
-              criarDados(modelo, modo, acertos, arrayDeQuestoes.length);
+              criarDados(null, modo, acertos, arrayDeQuestoes.length);
               window.location.assign("../treinoconcluido.html");
             }
             if (estado === "jogar") {
-              criarDados(modelo, modo, acertos, arrayDeQuestoes.length);
+              criarDados(
+                JSON.parse(localStorage.getItem("nome")),
+                modo,
+                acertos,
+                arrayDeQuestoes.length
+              );
               window.location.assign("./jogoconcluido.html");
             }
           } else {
@@ -176,14 +201,13 @@ function ApresentarQuestoes(arrayDeQuestoes, modo, modelo, ordem, acertos) {
           if (correta === resposta) {
             acertos += 1;
             if (ordem === arrayDeQuestoes.length) {
-              if (estado === "treinar") {
-                criarDados(modelo, modo, acertos, arrayDeQuestoes.length);
-                window.location.assign("./treinoconcluido.html");
-              }
-              if (estado === "jogar") {
-                criarDados(modelo, modo, acertos, arrayDeQuestoes.length);
-                window.location.assign("./jogoconcluido.html");
-              }
+              criarDados(
+                JSON.parse(localStorage.getItem("nome")),
+                modo,
+                acertos,
+                arrayDeQuestoes.length
+              );
+              window.location.assign("./jogoconcluido.html");
             } else {
               ApresentarQuestoes(
                 questoesParaJogar,
@@ -195,14 +219,13 @@ function ApresentarQuestoes(arrayDeQuestoes, modo, modelo, ordem, acertos) {
             }
           } else {
             if (ordem === arrayDeQuestoes.length) {
-              if (estado === "treinar") {
-                criarDados(modelo, modo, acertos, arrayDeQuestoes.length);
-                window.location.assign("./treinoconcluido.html");
-              }
-              if (estado === "jogar") {
-                criarDados(modelo, modo, acertos, arrayDeQuestoes.length);
-                window.location.assign("./jogoconcluido.html");
-              }
+              criarDados(
+                JSON.parse(localStorage.getItem("nome")),
+                modo,
+                acertos,
+                arrayDeQuestoes.length
+              );
+              window.location.assign("./jogoconcluido.html");
             } else {
               ApresentarQuestoes(
                 questoesParaJogar,
@@ -221,14 +244,13 @@ function ApresentarQuestoes(arrayDeQuestoes, modo, modelo, ordem, acertos) {
           if (correta !== resposta) {
             acertos += 1;
             if (ordem === arrayDeQuestoes.length) {
-              if (estado === "treinar") {
-                criarDados(modelo, modo, acertos, arrayDeQuestoes.length);
-                window.location.assign("./treinoconcluido.html");
-              }
-              if (estado === "jogar") {
-                criarDados(modelo, modo, acertos, arrayDeQuestoes.length);
-                window.location.assign("./jogoconcluido.html");
-              }
+              criarDados(
+                JSON.parse(localStorage.getItem("nome")),
+                modo,
+                acertos,
+                arrayDeQuestoes.length
+              );
+              window.location.assign("./jogoconcluido.html");
             } else {
               ApresentarQuestoes(
                 questoesParaJogar,
@@ -240,14 +262,13 @@ function ApresentarQuestoes(arrayDeQuestoes, modo, modelo, ordem, acertos) {
             }
           } else {
             if (ordem === arrayDeQuestoes.length) {
-              if (estado === "treinar") {
-                criarDados(modelo, modo, acertos, arrayDeQuestoes.length);
-                window.location.assign("./treinoconcluido.html");
-              }
-              if (estado === "jogar") {
-                criarDados(modelo, modo, acertos, arrayDeQuestoes.length);
-                window.location.assign("./jogoconcluido.html");
-              }
+              criarDados(
+                JSON.parse(localStorage.getItem("nome")),
+                modo,
+                acertos,
+                arrayDeQuestoes.length
+              );
+              window.location.assign("./jogoconcluido.html");
             } else {
               ApresentarQuestoes(
                 questoesParaJogar,
@@ -277,7 +298,12 @@ function ApresentarQuestoes(arrayDeQuestoes, modo, modelo, ordem, acertos) {
           //acertou
           acertos += 1;
           if (ordem === arrayDeQuestoes.length) {
-            criarDados(modelo, modo, acertos, arrayDeQuestoes.length);
+            criarDados(
+              JSON.parse(localStorage.getItem("nome")),
+              modo,
+              acertos,
+              arrayDeQuestoes.length
+            );
             window.location.assign("./jogoconcluido.html");
           } else {
             ApresentarQuestoes(questoesParaJogar, modo, modelo, ordem, acertos);
@@ -286,11 +312,21 @@ function ApresentarQuestoes(arrayDeQuestoes, modo, modelo, ordem, acertos) {
           // errou
           sessionStorage.setItem("corações", quant_coracao - 1);
           if (quant_coracao - 1 === 0) {
-            criarDados(modelo, modo, acertos, arrayDeQuestoes.length);
+            criarDados(
+              JSON.parse(localStorage.getItem("nome")),
+              modo,
+              acertos,
+              arrayDeQuestoes.length
+            );
             window.location.assign("./jogoconcluido.html");
           }
           if (ordem === arrayDeQuestoes.length) {
-            criarDados(modelo, modo, acertos, arrayDeQuestoes.length);
+            criarDados(
+              JSON.parse(localStorage.getItem("nome")),
+              modo,
+              acertos,
+              arrayDeQuestoes.length
+            );
             window.location.assign("./jogoconcluido.html");
           } else {
             ApresentarQuestoes(questoesParaJogar, modo, modelo, ordem, acertos);
@@ -303,7 +339,12 @@ function ApresentarQuestoes(arrayDeQuestoes, modo, modelo, ordem, acertos) {
           //acertou
           acertos += 1;
           if (ordem === arrayDeQuestoes.length) {
-            criarDados(modelo, modo, acertos, arrayDeQuestoes.length);
+            criarDados(
+              JSON.parse(localStorage.getItem("nome")),
+              modo,
+              acertos,
+              arrayDeQuestoes.length
+            );
             window.location.assign("./jogoconcluido.html");
           } else {
             ApresentarQuestoes(questoesParaJogar, modo, modelo, ordem, acertos);
@@ -312,11 +353,21 @@ function ApresentarQuestoes(arrayDeQuestoes, modo, modelo, ordem, acertos) {
           //errou
           sessionStorage.setItem("corações", quant_coracao - 1);
           if (quant_coracao - 1 === 0) {
-            criarDados(modelo, modo, acertos, arrayDeQuestoes.length);
+            criarDados(
+              JSON.parse(localStorage.getItem("nome")),
+              modo,
+              acertos,
+              arrayDeQuestoes.length
+            );
             window.location.assign("./jogoconcluido.html");
           }
           if (ordem === arrayDeQuestoes.length) {
-            criarDados(modelo, modo, acertos, arrayDeQuestoes.length);
+            criarDados(
+              JSON.parse(localStorage.getItem("nome")),
+              modo,
+              acertos,
+              arrayDeQuestoes.length
+            );
             window.location.assign("./jogoconcluido.html");
           } else {
             ApresentarQuestoes(questoesParaJogar, modo, modelo, ordem, acertos);

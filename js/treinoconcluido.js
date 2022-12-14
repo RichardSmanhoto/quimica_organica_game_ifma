@@ -9,8 +9,8 @@ function NotaDoUser(info) {
 }
 if (NotaDoUser(dados)) {
   //NOTA BOA
-  divMessage.innerHTML = `Parabéns!!! Você acertou ${dados.acertos} de ${dados.totalDeQuestao} questões`;
+  divMessage.innerHTML = `<p id="title">Parabéns!!!</p> <p>Você acertou ${dados.acertos} de ${dados.totalDeQuestao} questões</p>`;
 } else {
   //NOTA RUIM
-  divMessage.innerHTML = `Sentimos muito!!! Você acertou ${dados.acertos} de ${dados.totalDeQuestao} questões`;
+  divMessage.innerHTML = `<p id="title">Vamos se esforçar um pouco mais!&#128530 &#128542</p> <p>Você acertou ${dados.acertos} de ${dados.totalDeQuestao} questões...</p>`;
 }

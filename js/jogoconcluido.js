@@ -16,12 +16,16 @@ function modoText(info) {
 
 if (NotaDoUser(dados)) {
   //NOTA BOA
-  divMessage.innerHTML = `Parabéns, ${dados.nome}!!! Você acertou ${
-    dados.acertos
-  } de ${dados.totalDeQuestao} questões no modo ${modoText(dados.modo)}`;
+  divMessage.innerHTML = `<p id="title">Parabéns, ${
+    dados.nome
+  }!!!</p><p>Você acertou ${dados.acertos} de ${
+    dados.totalDeQuestao
+  } questões no modo ${modoText(dados.modo)}</p>`;
 } else {
   //NOTA RUIM
-  divMessage.innerHTML = `Sentimos muito, ${dados.nome}!!! Você acertou ${
-    dados.acertos
-  } de ${dados.totalDeQuestao} questões no modo ${modoText(dados.modo)}`;
+  divMessage.innerHTML = `<p id="title">Vamos se esforçar um pouco mais, ${
+    dados.nome
+  }! &#128530 &#128542</p><p>Você acertou ${dados.acertos} de ${
+    dados.totalDeQuestao
+  } questões no modo ${modoText(dados.modo)}...</p>`;
 }
